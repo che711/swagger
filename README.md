@@ -1,2 +1,2 @@
-# Tests of swagger
+# Tests of API
 
