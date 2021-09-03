@@ -1,10 +1,10 @@
 import requests
-from test_api import api_urls
-from test_api.headers import HEADERS
+import api_urls
+from headers import HEADERS
 from json import dumps
 import json
 
-#  pytest -s -vv --html=report.html tests_api.py
+#  pytest -s -vv tests_api.py
 
 def test_auth(user_data):
     '''Creating a new user'''
