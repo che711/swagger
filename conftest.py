@@ -6,16 +6,17 @@ import randomaizer
 def user_data():
     random_data = randomaizer.RandomData()
     random_name = random_data.generate_word(6)
-    data = {
-            "id": randint(1, 100),
-            "username": 'admin',
-            "firstName": random_name.title(),
-            "lastName": random_name.title(),
-            "email": "string@sad.com",
-            "password": "password123",
-            "phone": "123456789",
-            "userStatus": randint(1, 100)
-            }
+    data = [{
+            "id": 0,
+            "username": "string",
+            "firstName": "string",
+            "lastName": "string",
+            "email": "string",
+            "password": "string",
+            "phone": "string",
+            "userStatus": 0
+          }]
+
     return data
 
 @pytest.fixture()
