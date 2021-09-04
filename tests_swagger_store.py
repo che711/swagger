@@ -23,7 +23,7 @@ def test_store_oder_id():
 
 
 def test_store_oder_delete():
-    '''Place an oder for a pet'''
+    '''Delete an oder for a pet'''
     oder_delete = requests.delete(url=api_urls.Store.ODER_ID, headers=HEADERS)
     print("\n\t", oder_delete.url)
     assert oder_delete.status_code == 200, 'Falling'
