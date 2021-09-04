@@ -86,3 +86,24 @@ def store_oder():
         }
     return data
 
+@pytest.fixture()
+def pet_to_store():
+    pet = {
+          "id": 0,
+          "category": {
+            "id": 0,
+            "name": "string"
+          },
+          "name": "doggie",
+          "photoUrls": [
+            "string"
+          ],
+          "tags": [
+            {
+              "id": 0,
+              "name": "string"
+            }
+          ],
+          "status": "available"
+        }
+    return pet

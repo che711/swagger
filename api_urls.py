@@ -15,11 +15,11 @@ class Store():
     """Urls in group in store"""
     STORE_INVENTORY = BASE_URL + "/store/inventory"
     STORE_ODER = BASE_URL + "/store/order"
-    ODER_ID = BASE_URL + f"/store/order/{randint(1,10)}"
-
-
+    ODER_ID = BASE_URL + f"/store/order/{randint(1, 10)}"
 
 class Pet():
     """Urls in group in pet"""
-    pass
+    PET_TO_STORE = BASE_URL + "/pet"
+    FIND_PET_BY_STATUS = BASE_URL + "/pet/findByStatus"
+    FIND_PET_BY_ID = BASE_URL + f"/pet/{randint(1, 6)}"
 
