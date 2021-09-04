@@ -21,5 +21,7 @@ class Pet():
     """Urls in group in pet"""
     PET_TO_STORE = BASE_URL + "/pet"
     FIND_PET_BY_STATUS = BASE_URL + "/pet/findByStatus"
-    FIND_PET_BY_ID = BASE_URL + f"/pet/{randint(1, 6)}"
+    FIND_PET_BY_ID = BASE_URL + f"/pet/{randint(1, 5)}"
+    FIND_PET_BY_FORM = BASE_URL + f"/pet/{randint(1, 3)}"
+    UPLOADS_AN_IMAGE = BASE_URL + f"/pet/{randint(1, 5)}/uploadImage'"
 
