@@ -43,8 +43,46 @@ def create_user():
           }
     return data
 
+@pytest.fixture()
+def store_inventory():
+    data = {
+          "sold": randint(1, 10),
+          "string": randint(1, 100),
+          "pending": randint(1, 100),
+          "available": randint(1, 1000)
+        }
+    return data
+
+@pytest.fixture()
+def store_inventory():
+    data = {
+          "sold": randint(1, 10),
+          "string": randint(1, 100),
+          "pending": randint(1, 100),
+          "available": randint(1, 1000)
+        }
+    return data
+
+@pytest.fixture()
+def store_inventory():
+    data = {
+          "sold": randint(1, 10),
+          "string": randint(1, 100),
+          "pending": randint(1, 100),
+          "available": randint(1, 1000)
+        }
+    return data
 
 
-
-
+@pytest.fixture()
+def store_oder():
+    data = {
+          "id": 0,
+          "petId": 0,
+          "quantity": 0,
+          "shipDate": "2021-09-04T10:14:03.177Z",
+          "status": "placed",
+          "complete": True
+        }
+    return data
 

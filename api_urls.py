@@ -1,3 +1,5 @@
+from random import randint
+
 BASE_URL = "https://petstore.swagger.io/v2"
 
 class User():
@@ -11,7 +13,11 @@ class User():
 
 class Store():
     """Urls in group in store"""
-    pass
+    STORE_INVENTORY = BASE_URL + "/store/inventory"
+    STORE_ODER = BASE_URL + "/store/order"
+    ODER_ID = BASE_URL + f"/store/order/{randint(1,10)}"
+
+
 
 class Pet():
     """Urls in group in pet"""
