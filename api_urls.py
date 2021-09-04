@@ -6,6 +6,7 @@ USERNAME = BASE_URL + "/user/string"
 USERLOGIN = BASE_URL + "/user/login"
 USERLOGOUT = BASE_URL + "/user/logout"
 USERS_LIST = BASE_URL + "/user/createWithArray"
+CREATE_USER = BASE_URL + "/user"
 
 
 

@@ -27,6 +27,22 @@ def get_login():
           }]
     return data
 
+@pytest.fixture()
+def create_user():
+    random_data = randomaizer.RandomData()
+    random_name = random_data.generate_word(6)
+    data = {
+            "id": 0,
+            "username": "string",
+            "firstName": "string",
+            "lastName": "string",
+            "email": "string",
+            "password": "string",
+            "phone": "string",
+            "userStatus": 0
+          }
+    return data
+
 
 
 @pytest.fixture()

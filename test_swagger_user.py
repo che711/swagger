@@ -17,9 +17,9 @@ def test_user_get_username(user_data):
     # print("\n\t", user.text)
     assert user.status_code == 200, 'Falling'
 
-def test_user_put_username(user_data):
+def test_user_put_username(create_user):
     """Update user"""
-    user_update = requests.put(url=api_urls.USERNAME, headers=HEADERS, data=dumps(user_data))
+    user_update = requests.put(url=api_urls.USERNAME, headers=HEADERS, data=dumps(create_user))
     assert user_update.status_code == 200, 'Falling'
 
 def test_user_del_username(user_data):
@@ -41,6 +41,12 @@ def test_list_users(user_data):
     """Creates list of users with given input array"""
     users_list = requests.post(url=api_urls.USERS_LIST, headers=HEADERS, data=dumps(user_data))
     assert users_list.status_code == 200, 'Falling'
+
+def test_create_user(create_user):
+    """This can only be done by the logged in user"""
+    create_user = requests.post(url="https://petstore.swagger.io/v2/user", headers=HEADERS, data=dumps(create_user))
+    assert create_user.status_code == 200, 'Falling'
+
 
 
 
