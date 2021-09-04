@@ -15,9 +15,19 @@ def user_data():
             "password": "string",
             "phone": "string",
             "userStatus": 0
-          }]
-
+          }
+    ]
     return data
+
+@pytest.fixture()
+def get_login():
+    data = [{
+            "username": "string",
+            "password": "string"
+          }]
+    return data
+
+
 
 @pytest.fixture()
 def create_booking():

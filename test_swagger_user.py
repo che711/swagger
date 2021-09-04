@@ -1,0 +1,46 @@
+import requests
+import api_urls
+from headers import HEADERS
+from json import dumps
+import json
+
+#  pytest -s -vv test_swagger_user.py
+
+def test_user_post_createWithList(user_data):
+    '''Creates list of users with given input array'''
+    user = requests.post(url=api_urls.USER, headers=HEADERS, data=dumps(user_data))
+    assert user.status_code == 200, 'Falling'
+
+def test_user_get_username(user_data):
+    """Get user by user name"""
+    user = requests.get(url=api_urls.USERNAME,)
+    # print("\n\t", user.text)
+    assert user.status_code == 200, 'Falling'
+
+def test_user_put_username(user_data):
+    """Update user"""
+    user_update = requests.put(url=api_urls.USERNAME, headers=HEADERS, data=dumps(user_data))
+    assert user_update.status_code == 200, 'Falling'
+
+def test_user_del_username(user_data):
+    """Delete user"""
+    user_delete = requests.delete(url=api_urls.USERNAME, headers=HEADERS)
+    assert user_delete.status_code == 200, 'Falling'
+
+def test_user_login(get_login):
+    """Logs user into the system"""
+    user_loin = requests.get(url=api_urls.USERLOGIN, headers=HEADERS, data=dumps(get_login))
+    assert user_loin.status_code == 200, 'Falling'
+
+def test_user_logout(get_login):
+    """logs out current logged in the session"""
+    user_loin = requests.get(url=api_urls.USERLOGOUT)
+    assert user_loin.status_code == 200, 'Falling'
+
+def test_list_users(user_data):
+    """Creates list of users with given input array"""
+    users_list = requests.post(url=api_urls.USERS_LIST, headers=HEADERS, data=dumps(user_data))
+    assert users_list.status_code == 200, 'Falling'
+
+
+
