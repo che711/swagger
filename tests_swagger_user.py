@@ -3,7 +3,7 @@ import api_urls
 from headers import HEADERS
 from json import dumps
 
-#  pytest -s -vv test_swagger_user.py
+#  pytest -s -vv tests_swagger_user.py
 
 def test_user_post_createWithList(user_data):
     '''Creates list of users with given input array'''
