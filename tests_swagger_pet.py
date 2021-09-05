@@ -25,28 +25,28 @@ def test_find_pet():
 def test_find_pet_by_id():
     '''Finds pet by status'''
     find_pet_by_id = requests.get(url=api_urls.Pet.FIND_PET_BY_ID)
-    print("\n\t", find_pet_by_id.url)
+    # print("\n\t", find_pet_by_id.url)
     assert find_pet_by_id.status_code == 200, 'Falling'
 
 @pytest.mark.skip(reason="there is a random value")
 def test_update_pet_by_form():
     '''Updates a pet in the store with form data'''
     update_pet = requests.post(url=api_urls.Pet.FIND_PET_BY_FORM)
-    print("\n\t", update_pet.url)
+    # print("\n\t", update_pet.url)
     assert update_pet.status_code == 200, 'Falling'
 
-@pytest.mark.skip(reason="there is a random value")
+@pytest.mark.xfail
 def test_delete_pet(pet_to_store):
     '''Deletes a pet'''
     delete_pet = requests.delete(url=api_urls.Pet.FIND_PET_BY_ID)
-    print("\n\t", delete_pet.url)
+    # print("\n\t", delete_pet.url)
     assert delete_pet.status_code == 200, 'Falling'
 
-@pytest.mark.skip(reason="there is a random value")
+@pytest.mark.xfail
 def test_uploads_image():
     '''Uploads an image'''
     image = requests.post(url=api_urls.Pet.UPLOADS_AN_IMAGE)
-    print("\n\t", image.url)
+    # print("\n\t", image.url)
     assert image.status_code == 200, 'Falling'
 
 
