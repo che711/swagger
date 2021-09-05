@@ -35,7 +35,7 @@ def test_update_pet_by_form():
     # print("\n\t", update_pet.url)
     assert update_pet.status_code == 200, 'Falling'
 
-@pytest.mark.xfail
+@pytest.mark.skip(reason="there is a random value")
 def test_delete_pet(pet_to_store):
     '''Deletes a pet'''
     delete_pet = requests.delete(url=api_urls.Pet.FIND_PET_BY_ID)
