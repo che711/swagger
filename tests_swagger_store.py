@@ -23,7 +23,7 @@ def test_store_oder_id():
     # print("\n\t", oder_id.url)
     assert oder_id.status_code == 200, 'Falling'
 
-@pytest.mark.skip(reason="there is a random value")
+@pytest.mark.xfail
 def test_store_oder_delete():
     '''Delete an oder for a pet'''
     oder_delete = requests.delete(url=api_urls.Store.ODER_ID, headers=HEADERS)
