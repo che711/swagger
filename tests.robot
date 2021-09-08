@@ -1,7 +1,9 @@
 *** Settings ***
-Library Collection
-Library RequestsLibrary
+Library    Collections
+Library    RequestsLibrary
 
-*** Test Cases ***
+*** Test Case ***
 Quick Get Request Test
-    ${response}=    GET    https://petstore.swagger.io/v2/user/string    expected_status=200
+    ${response}= GET https://petstore.swagger.io/v2/user/string
+Quick Get Request With Parameters Test
+    ${response}=    GET  https://www.google.com/search  params=query=ciao  expected_status=200

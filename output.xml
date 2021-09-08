@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210908 19:51:58.323" rpa="false" schemaversion="2">
-<suite id="s1" name="Tests" source="/home/chernomorov/Desktop/projects/swagger/tests.robot">
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210908 22:23:44.554" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot">
 <test id="s1-t1" name="Quick Get Request Test">
+<kw name="${response}= GET https://petstore.swagger.io/v2/user/string">
+<msg timestamp="20210908 22:23:44.592" level="FAIL">No keyword with name '${response}= GET https://petstore.swagger.io/v2/user/string' found.</msg>
+<status status="FAIL" starttime="20210908 22:23:44.592" endtime="20210908 22:23:44.592"/>
+</kw>
+<status status="FAIL" starttime="20210908 22:23:44.588" endtime="20210908 22:23:44.594">No keyword with name '${response}= GET https://petstore.swagger.io/v2/user/string' found.</status>
+</test>
+<test id="s1-t2" name="Quick Get Request With Parameters Test">
 <kw name="GET">
 <var>${response}=</var>
-<arg>https://petstore.swagger.io/v2/user/string</arg>
+<arg>https://www.google.com/search</arg>
+<arg>params=query=ciao</arg>
 <arg>expected_status=200</arg>
-<msg timestamp="20210908 19:51:58.343" level="FAIL">No keyword with name 'GET' found. Did you mean:
+<msg timestamp="20210908 22:23:44.600" level="FAIL">No keyword with name 'GET' found. Did you mean:
     BuiltIn.Get Time</msg>
-<status status="FAIL" starttime="20210908 19:51:58.343" endtime="20210908 19:51:58.343"/>
+<status status="FAIL" starttime="20210908 22:23:44.600" endtime="20210908 22:23:44.600"/>
 </kw>
-<status status="FAIL" starttime="20210908 19:51:58.341" endtime="20210908 19:51:58.343">No keyword with name 'GET' found. Did you mean:
+<status status="FAIL" starttime="20210908 22:23:44.595" endtime="20210908 22:23:44.601">No keyword with name 'GET' found. Did you mean:
     BuiltIn.Get Time</status>
 </test>
-<status status="FAIL" starttime="20210908 19:51:58.324" endtime="20210908 19:51:58.344"/>
+<status status="FAIL" starttime="20210908 22:23:44.555" endtime="20210908 22:23:44.602"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210908 19:51:58.321" level="ERROR">Error in file '/home/chernomorov/Desktop/projects/swagger/tests.robot' on line 2: Non-existing setting 'Library Collection'.</msg>
-<msg timestamp="20210908 19:51:58.321" level="ERROR">Error in file '/home/chernomorov/Desktop/projects/swagger/tests.robot' on line 3: Non-existing setting 'Library RequestsLibrary'.</msg>
+<msg timestamp="20210908 22:23:44.587" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/andrew/Рабочий стол/Andrei_Che/swagger/venv/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/andrew/Рабочий стол/Andrei_Che/swagger/venv/lib/python3.8/site-packages</msg>
 </errors>
 </robot>

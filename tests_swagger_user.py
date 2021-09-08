@@ -12,7 +12,7 @@ def test_user_post_createWithList(user_data):
 
 def test_user_get_username(user_data):
     """Get user by user name"""
-    user = requests.get(url=api_urls.User.USERNAME,)
+    user = requests.get(url=api_urls.User.USERNAME)
     assert user.status_code == 200, 'Falling'
 
 def test_user_put_username(create_user):

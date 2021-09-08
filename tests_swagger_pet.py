@@ -48,7 +48,3 @@ def test_uploads_image():
     image = requests.post(url=api_urls.Pet.UPLOADS_AN_IMAGE)
     # print("\n\t", image.url)
     assert image.status_code == 200, 'Falling'
-
-
-
-
