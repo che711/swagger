@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210908 17:41:23.156" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210908 18:00:04.956" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="/home/chernomorov/Desktop/projects/swagger/tests.robot">
 <kw name="Open Browser To Login Page" type="SETUP">
-<msg timestamp="20210908 17:41:23.177" level="FAIL">No keyword with name 'Open Browser To Login Page' found.</msg>
-<status status="FAIL" starttime="20210908 17:41:23.177" endtime="20210908 17:41:23.177"/>
+<msg timestamp="20210908 18:00:04.979" level="FAIL">No keyword with name 'Open Browser To Login Page' found.</msg>
+<status status="FAIL" starttime="20210908 18:00:04.979" endtime="20210908 18:00:04.979"/>
 </kw>
 <test id="s1-t1" name="Invalid Username">
-<status status="FAIL" starttime="20210908 17:41:23.177" endtime="20210908 17:41:23.177">Parent suite setup failed:
+<status status="FAIL" starttime="20210908 18:00:04.980" endtime="20210908 18:00:04.980">Parent suite setup failed:
 No keyword with name 'Open Browser To Login Page' found.</status>
 </test>
 <test id="s1-t2" name="Invalid Password">
-<status status="FAIL" starttime="20210908 17:41:23.178" endtime="20210908 17:41:23.178">Parent suite setup failed:
+<status status="FAIL" starttime="20210908 18:00:04.980" endtime="20210908 18:00:04.981">Parent suite setup failed:
 No keyword with name 'Open Browser To Login Page' found.</status>
 </test>
 <test id="s1-t3" name="Invalid Username And Password">
-<status status="FAIL" starttime="20210908 17:41:23.178" endtime="20210908 17:41:23.179">Parent suite setup failed:
+<status status="FAIL" starttime="20210908 18:00:04.981" endtime="20210908 18:00:04.982">Parent suite setup failed:
 No keyword with name 'Open Browser To Login Page' found.</status>
 </test>
 <test id="s1-t4" name="Empty Username">
-<status status="FAIL" starttime="20210908 17:41:23.180" endtime="20210908 17:41:23.180">Parent suite setup failed:
+<status status="FAIL" starttime="20210908 18:00:04.982" endtime="20210908 18:00:04.982">Parent suite setup failed:
 No keyword with name 'Open Browser To Login Page' found.</status>
 </test>
 <test id="s1-t5" name="Empty Password">
-<status status="FAIL" starttime="20210908 17:41:23.181" endtime="20210908 17:41:23.181">Parent suite setup failed:
+<status status="FAIL" starttime="20210908 18:00:04.983" endtime="20210908 18:00:04.983">Parent suite setup failed:
 No keyword with name 'Open Browser To Login Page' found.</status>
 </test>
 <test id="s1-t6" name="Empty Username And Password">
-<status status="FAIL" starttime="20210908 17:41:23.182" endtime="20210908 17:41:23.182">Parent suite setup failed:
+<status status="FAIL" starttime="20210908 18:00:04.983" endtime="20210908 18:00:04.984">Parent suite setup failed:
 No keyword with name 'Open Browser To Login Page' found.</status>
 </test>
 <kw name="Close Browser" type="TEARDOWN">
-<msg timestamp="20210908 17:41:23.184" level="FAIL">No keyword with name 'Close Browser' found.</msg>
-<status status="FAIL" starttime="20210908 17:41:23.184" endtime="20210908 17:41:23.184">No keyword with name 'Close Browser' found.</status>
+<msg timestamp="20210908 18:00:04.985" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210908 18:00:04.985" endtime="20210908 18:00:04.985">No keyword with name 'Close Browser' found.</status>
 </kw>
-<status status="FAIL" starttime="20210908 17:41:23.156" endtime="20210908 17:41:23.184">Suite setup failed:
+<status status="FAIL" starttime="20210908 18:00:04.957" endtime="20210908 18:00:04.985">Suite setup failed:
 No keyword with name 'Open Browser To Login Page' found.
 
 Also suite teardown failed:
@@ -50,6 +50,6 @@ No keyword with name 'Close Browser' found.</status>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210908 17:41:23.175" level="ERROR">Error in file '/home/chernomorov/Desktop/projects/swagger/tests.robot' on line 6: Resource file 'resource.txt' does not exist.</msg>
+<msg timestamp="20210908 18:00:04.977" level="ERROR">Error in file '/home/chernomorov/Desktop/projects/swagger/tests.robot' on line 6: Resource file 'resource.txt' does not exist.</msg>
 </errors>
 </robot>
