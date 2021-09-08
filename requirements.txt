@@ -2,3 +2,4 @@ pytest
 requests
 selenium
 allure-pytest
+robot
