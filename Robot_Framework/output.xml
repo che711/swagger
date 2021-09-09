@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210909 15:57:46.490" rpa="false" schemaversion="2">
-<suite id="s1" name="Tests" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/tests.robot">
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210909 16:05:31.604" rpa="false" schemaversion="2">
+<suite id="s1" name="Example" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/example.robot">
 <test id="s1-t1" name="My Test">
 <kw name="Log" library="BuiltIn">
 <arg>${MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210909 15:57:46.523" level="INFO">Hello, world!</msg>
-<status status="PASS" starttime="20210909 15:57:46.523" endtime="20210909 15:57:46.523"/>
+<msg timestamp="20210909 16:05:31.628" level="INFO">Hello, world!</msg>
+<status status="PASS" starttime="20210909 16:05:31.628" endtime="20210909 16:05:31.628"/>
 </kw>
 <kw name="My Keyword">
 <arg>/home/chernomorov/Desktop/projects/swagger/Robot_Framework</arg>
 <kw name="Directory Should Exist" library="OperatingSystem">
 <arg>${path}</arg>
 <doc>Fails unless the given path points to an existing directory.</doc>
-<msg timestamp="20210909 15:57:46.524" level="INFO" html="true">Directory '&lt;a href="file:///home/chernomorov/Desktop/projects/swagger/Robot_Framework"&gt;/home/chernomorov/Desktop/projects/swagger/Robot_Framework&lt;/a&gt;' exists.</msg>
-<status status="PASS" starttime="20210909 15:57:46.523" endtime="20210909 15:57:46.524"/>
+<msg timestamp="20210909 16:05:31.629" level="INFO" html="true">Directory '&lt;a href="file:///home/chernomorov/Desktop/projects/swagger/Robot_Framework"&gt;/home/chernomorov/Desktop/projects/swagger/Robot_Framework&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20210909 16:05:31.629" endtime="20210909 16:05:31.629"/>
 </kw>
-<status status="PASS" starttime="20210909 15:57:46.523" endtime="20210909 15:57:46.524"/>
+<status status="PASS" starttime="20210909 16:05:31.629" endtime="20210909 16:05:31.629"/>
 </kw>
 <doc>Example test.</doc>
-<status status="PASS" starttime="20210909 15:57:46.522" endtime="20210909 15:57:46.524"/>
+<status status="PASS" starttime="20210909 16:05:31.628" endtime="20210909 16:05:31.629"/>
 </test>
 <test id="s1-t2" name="Another Test">
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${MESSAGE}</arg>
 <arg>Hello, world!</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210909 15:57:46.525" endtime="20210909 15:57:46.525"/>
+<status status="PASS" starttime="20210909 16:05:31.630" endtime="20210909 16:05:31.630"/>
 </kw>
-<status status="PASS" starttime="20210909 15:57:46.524" endtime="20210909 15:57:46.525"/>
+<status status="PASS" starttime="20210909 16:05:31.630" endtime="20210909 16:05:31.630"/>
 </test>
 <doc>Example using the space separated format.</doc>
-<status status="PASS" starttime="20210909 15:57:46.491" endtime="20210909 15:57:46.525"/>
+<status status="PASS" starttime="20210909 16:05:31.604" endtime="20210909 16:05:31.631"/>
 </suite>
 <statistics>
 <total>
@@ -40,7 +40,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Example">Example</stat>
 </suite>
 </statistics>
 <errors>

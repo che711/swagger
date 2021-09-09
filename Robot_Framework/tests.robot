@@ -1,20 +1,11 @@
 *** Settings ***
-Documentation     Example using the space separated format.
-Library           OperatingSystem
+Library    Collections
+Library    RequestsLibrary
 
 *** Variables ***
-${MESSAGE}        Hello, world!
+${Base_URL}= https://petstore.swagger.io/v2
 
-*** Test Cases ***
-My Test
-    [Documentation]    Example test.
-    Log    ${MESSAGE}
-    My Keyword    ${CURDIR}
+*** Test Case ***
+Quick Get Request Test
+${response}= GET https://petstore.swagger.io/v2/user/string expected_status=200
 
-Another Test
-    Should Be Equal    ${MESSAGE}    Hello, world!
-
-*** Keywords ***
-My Keyword
-    [Arguments]    ${path}
-    Directory Should Exist    ${path}
