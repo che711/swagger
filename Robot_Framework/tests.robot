@@ -8,7 +8,7 @@ ${Base_URL}   https://petstore.swagger.io/v2/user/createWithList
 *** Test Case ***
 MyFirstTest
     Create Session    Update_Subscription    ${Base_URL}
-    ${headers}= "Content-Type": "application/json"
+    ${headers}= Content-Type=application/json
     ${data}= [{"id": 0,
             "username": "string",
             "firstName": "string",

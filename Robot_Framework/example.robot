@@ -2,24 +2,24 @@
 Documentation     Example using the space separated format.
 ...               Checking the information provided in the
 ...               Robot Framework documentation.
-Library    RequestsLibrary
-Library    OperatingSystem
+Library           RequestsLibrary
 
 *** Variables ***
-${MESSAGE}        Hello, world!
-${Base_URL}       https://petstore.swagger.io/v2/user/string
+${Base_URL}       https://petstore.swagger.io/v2
+${headers}        Content-Type=application/json
+${data}           [{"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0}]
+${data_2}         {"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0}
+
 
 *** Test Cases ***
-My Test
-    [Documentation]    Example test.
-    Log    ${MESSAGE}
-    My Keyword          ${CURDIR}
 
-Another Test
-    Should Be Equal    ${MESSAGE}    Hello, world!
-
-The second Test
+Swagger user get username Test
     ${response}=    GET  https://petstore.swagger.io/v2/user/string
+
+#Swagger user post createWithList Test
+#    ${response}=    POST  https://petstore.swagger.io/v2/user/createWithList  headers=  ${headers}  data=  ${data}
+#    ${code}= converse to string  ${response.status_code}
+#    should be equal  ${code}  200
 
 #Swagger Test create new resourse
 #    TC001_PostRequest create session petstore   https://petstore.swagger.io/v2/user/string
@@ -29,8 +29,3 @@ The second Test
 #    ${response}=  post  request    petstore   data=${body}  headers= &{header}
 #    &{code}= converse to string  ${responce.status_code}
 #    should be equal  ${code}  200
-
-*** Keywords ***
-My Keyword
-    [Arguments]    ${path}
-    Directory Should Exist    ${path}
