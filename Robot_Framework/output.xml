@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210909 10:57:27.064" rpa="false" schemaversion="2">
-<suite id="s1" name="Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/tests.robot">
-<test id="s1-t1" name="Quick Get Request Test">
-<status status="FAIL" starttime="20210909 10:57:27.109" endtime="20210909 10:57:27.110">Test case contains no keywords.</status>
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210909 15:57:46.490" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/tests.robot">
+<test id="s1-t1" name="My Test">
+<kw name="Log" library="BuiltIn">
+<arg>${MESSAGE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210909 15:57:46.523" level="INFO">Hello, world!</msg>
+<status status="PASS" starttime="20210909 15:57:46.523" endtime="20210909 15:57:46.523"/>
+</kw>
+<kw name="My Keyword">
+<arg>/home/chernomorov/Desktop/projects/swagger/Robot_Framework</arg>
+<kw name="Directory Should Exist" library="OperatingSystem">
+<arg>${path}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<msg timestamp="20210909 15:57:46.524" level="INFO" html="true">Directory '&lt;a href="file:///home/chernomorov/Desktop/projects/swagger/Robot_Framework"&gt;/home/chernomorov/Desktop/projects/swagger/Robot_Framework&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20210909 15:57:46.523" endtime="20210909 15:57:46.524"/>
+</kw>
+<status status="PASS" starttime="20210909 15:57:46.523" endtime="20210909 15:57:46.524"/>
+</kw>
+<doc>Example test.</doc>
+<status status="PASS" starttime="20210909 15:57:46.522" endtime="20210909 15:57:46.524"/>
 </test>
-<test id="s1-t2" name="${response}= GET https://petstore.swagger.io/v2/user/string expected_status=200">
-<status status="FAIL" starttime="20210909 10:57:27.112" endtime="20210909 10:57:27.112">Test case contains no keywords.</status>
+<test id="s1-t2" name="Another Test">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${MESSAGE}</arg>
+<arg>Hello, world!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210909 15:57:46.525" endtime="20210909 15:57:46.525"/>
+</kw>
+<status status="PASS" starttime="20210909 15:57:46.524" endtime="20210909 15:57:46.525"/>
 </test>
-<status status="FAIL" starttime="20210909 10:57:27.065" endtime="20210909 10:57:27.113"/>
+<doc>Example using the space separated format.</doc>
+<status status="PASS" starttime="20210909 15:57:46.491" endtime="20210909 15:57:46.525"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210909 10:57:27.066" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/tests.robot' on line 6: Setting variable '${Base_URL}= https://petstore.swagger.io/v2' failed: Invalid variable name '${Base_URL}= https://petstore.swagger.io/v2'.</msg>
-<msg timestamp="20210909 10:57:27.108" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/tests.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  /home/andrew/.local/bin
-  /usr/lib/python38.zip
-  /usr/lib/python3.8
-  /usr/lib/python3.8/lib-dynload
-  /home/andrew/.local/lib/python3.8/site-packages
-  /usr/local/lib/python3.8/dist-packages
-  /usr/lib/python3/dist-packages</msg>
 </errors>
 </robot>
