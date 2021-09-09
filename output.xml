@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210909 09:09:17.414" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210909 10:02:00.830" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot">
 <test id="s1-t1" name="Quick Get Request Test">
-<status status="FAIL" starttime="20210909 09:09:17.461" endtime="20210909 09:09:17.462">Test case contains no keywords.</status>
+<status status="FAIL" starttime="20210909 10:02:00.875" endtime="20210909 10:02:00.876">Test case contains no keywords.</status>
 </test>
 <test id="s1-t2" name="${response}= GET https://petstore.swagger.io/v2/user/string expected_status=200">
-<status status="FAIL" starttime="20210909 09:09:17.465" endtime="20210909 09:09:17.466">Test case contains no keywords.</status>
+<status status="FAIL" starttime="20210909 10:02:00.878" endtime="20210909 10:02:00.878">Test case contains no keywords.</status>
 </test>
-<status status="FAIL" starttime="20210909 09:09:17.415" endtime="20210909 09:09:17.467"/>
+<status status="FAIL" starttime="20210909 10:02:00.831" endtime="20210909 10:02:00.879"/>
 </suite>
 <statistics>
 <total>
@@ -20,7 +20,8 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210909 09:09:17.460" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+<msg timestamp="20210909 10:02:00.831" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot' on line 6: Setting variable '${Base_URL}= https://petstore.swagger.io/v2' failed: Invalid variable name '${Base_URL}= https://petstore.swagger.io/v2'.</msg>
+<msg timestamp="20210909 10:02:00.874" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
 Traceback (most recent call last):
   None
 PYTHONPATH:
