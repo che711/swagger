@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210908 22:23:44.554" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210909 09:09:17.414" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot">
 <test id="s1-t1" name="Quick Get Request Test">
-<kw name="${response}= GET https://petstore.swagger.io/v2/user/string">
-<msg timestamp="20210908 22:23:44.592" level="FAIL">No keyword with name '${response}= GET https://petstore.swagger.io/v2/user/string' found.</msg>
-<status status="FAIL" starttime="20210908 22:23:44.592" endtime="20210908 22:23:44.592"/>
-</kw>
-<status status="FAIL" starttime="20210908 22:23:44.588" endtime="20210908 22:23:44.594">No keyword with name '${response}= GET https://petstore.swagger.io/v2/user/string' found.</status>
+<status status="FAIL" starttime="20210909 09:09:17.461" endtime="20210909 09:09:17.462">Test case contains no keywords.</status>
 </test>
-<test id="s1-t2" name="Quick Get Request With Parameters Test">
-<kw name="GET">
-<var>${response}=</var>
-<arg>https://www.google.com/search</arg>
-<arg>params=query=ciao</arg>
-<arg>expected_status=200</arg>
-<msg timestamp="20210908 22:23:44.600" level="FAIL">No keyword with name 'GET' found. Did you mean:
-    BuiltIn.Get Time</msg>
-<status status="FAIL" starttime="20210908 22:23:44.600" endtime="20210908 22:23:44.600"/>
-</kw>
-<status status="FAIL" starttime="20210908 22:23:44.595" endtime="20210908 22:23:44.601">No keyword with name 'GET' found. Did you mean:
-    BuiltIn.Get Time</status>
+<test id="s1-t2" name="${response}= GET https://petstore.swagger.io/v2/user/string expected_status=200">
+<status status="FAIL" starttime="20210909 09:09:17.465" endtime="20210909 09:09:17.466">Test case contains no keywords.</status>
 </test>
-<status status="FAIL" starttime="20210908 22:23:44.555" endtime="20210908 22:23:44.602"/>
+<status status="FAIL" starttime="20210909 09:09:17.415" endtime="20210909 09:09:17.467"/>
 </suite>
 <statistics>
 <total>
@@ -34,14 +20,16 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210908 22:23:44.587" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+<msg timestamp="20210909 09:09:17.460" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/tests.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
 Traceback (most recent call last):
   None
 PYTHONPATH:
-  /home/andrew/Рабочий стол/Andrei_Che/swagger/venv/bin
+  /home/andrew/.local/bin
   /usr/lib/python38.zip
   /usr/lib/python3.8
   /usr/lib/python3.8/lib-dynload
-  /home/andrew/Рабочий стол/Andrei_Che/swagger/venv/lib/python3.8/site-packages</msg>
+  /home/andrew/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
 </errors>
 </robot>
