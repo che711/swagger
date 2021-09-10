@@ -1,241 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 14:42:12.615" rpa="false" schemaversion="2">
-<suite id="s1" name="Users Tests" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/users_tests.robot">
-<test id="s1-t1" name="Swagger user get username Test">
-<kw name="GET" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user/string</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20210910 14:42:13.746" level="INFO">GET Request : url=https://petstore.swagger.io/v2/user/string 
- path_url=/v2/user/string 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20210910 14:42:13.746" level="INFO">GET Response : url=https://petstore.swagger.io/v2/user/string 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:13 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":9223372000666117127,"username":"string","firstName":"string","lastName":"string","email":"string","password":"string","phone":"string","userStatus":0} 
- </msg>
-<msg timestamp="20210910 14:42:13.747" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:12.683" endtime="20210910 14:42:13.747"/>
-</kw>
-<status status="PASS" starttime="20210910 14:42:12.683" endtime="20210910 14:42:13.747"/>
-</test>
-<test id="s1-t2" name="Swagger user post createWithList Test">
+<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 15:03:13.639" rpa="false" schemaversion="2">
+<suite id="s1" name="Store Tests" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/store_tests.robot">
+<test id="s1-t1" name="Swagger store inventory Test">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 14:42:13.749" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 14:42:13.749" endtime="20210910 14:42:13.749"/>
-</kw>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user/createWithList</arg>
-<arg>data= ${data_list}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20210910 14:42:14.777" level="INFO">POST Request : url=https://petstore.swagger.io/v2/user/createWithList 
- path_url=/v2/user/createWithList 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '156'} 
- body= [{"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0}] 
- </msg>
-<msg timestamp="20210910 14:42:14.778" level="INFO">POST Response : url=https://petstore.swagger.io/v2/user/createWithList 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:14 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"ok"} 
- </msg>
-<msg timestamp="20210910 14:42:14.778" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:13.750" endtime="20210910 14:42:14.778"/>
-</kw>
-<status status="PASS" starttime="20210910 14:42:13.748" endtime="20210910 14:42:14.779"/>
-</test>
-<test id="s1-t3" name="Swagger user put username Test">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 14:42:14.782" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 14:42:14.782" endtime="20210910 14:42:14.783"/>
-</kw>
-<kw name="PUT" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user/string</arg>
-<arg>data=${data}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a PUT request.</doc>
-<msg timestamp="20210910 14:42:16.374" level="INFO">PUT Request : url=https://petstore.swagger.io/v2/user/string 
- path_url=/v2/user/string 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '153'} 
- body={"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0} 
- </msg>
-<msg timestamp="20210910 14:42:16.374" level="INFO">PUT Response : url=https://petstore.swagger.io/v2/user/string 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:16 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"9223372000666118085"} 
- </msg>
-<msg timestamp="20210910 14:42:16.374" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:14.783" endtime="20210910 14:42:16.375"/>
-</kw>
-<status status="PASS" starttime="20210910 14:42:14.780" endtime="20210910 14:42:16.375"/>
-</test>
-<test id="s1-t4" name="Swagger user del username Test">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 14:42:16.379" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 14:42:16.378" endtime="20210910 14:42:16.379"/>
-</kw>
-<kw name="DELETE" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user/string</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a DELETE request.</doc>
-<msg timestamp="20210910 14:42:17.443" level="INFO">DELETE Request : url=https://petstore.swagger.io/v2/user/string 
- path_url=/v2/user/string 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '0'} 
- body=None 
- </msg>
-<msg timestamp="20210910 14:42:17.444" level="INFO">DELETE Response : url=https://petstore.swagger.io/v2/user/string 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:17 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"string"} 
- </msg>
-<msg timestamp="20210910 14:42:17.444" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:16.379" endtime="20210910 14:42:17.444"/>
-</kw>
-<status status="PASS" starttime="20210910 14:42:16.376" endtime="20210910 14:42:17.445"/>
-</test>
-<test id="s1-t5" name="Swagger user login Test">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 14:42:17.447" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 14:42:17.447" endtime="20210910 14:42:17.447"/>
+<msg timestamp="20210910 15:03:13.710" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 15:03:13.710" endtime="20210910 15:03:13.710"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user/login</arg>
+<arg>https://petstore.swagger.io/v2/store/inventory</arg>
+<arg>data= ${data}</arg>
 <arg>headers=${headers}</arg>
-<arg>data=${data_to_login}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20210910 14:42:18.621" level="INFO">GET Request : url=https://petstore.swagger.io/v2/user/login 
- path_url=/v2/user/login 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '46'} 
- body=[{"username": "string", "password": "string"}] 
+<msg timestamp="20210910 15:03:14.777" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/inventory 
+ path_url=/v2/store/inventory 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '111'} 
+ body= {"sold": randint(1, 10), "string": randint(1, 100), "pending": randint(1, 100), "available": randint(1, 1000)} 
  </msg>
-<msg timestamp="20210910 14:42:18.621" level="INFO">GET Response : url=https://petstore.swagger.io/v2/user/login 
+<msg timestamp="20210910 15:03:14.777" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/inventory 
  status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:18 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'X-Expires-After': 'Fri Sep 10 12:42:18 UTC 2021', 'X-Rate-Limit': '5000', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"logged in user session:1631274138560"} 
+ headers={'Date': 'Fri, 10 Sep 2021 12:03:14 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"sold":10,"string":194,"pendind":1,"unavailable":1,"pending":13,"available":684,"avalible":1,"Not Available":1,"{{pet2Status}}":1,"pending and 1=(case 1 when 0 then (select count(*) from syscat.datatypes d1, syscat.datatypes d2, syscat.datatypes d3, syscat.datatypes d4, syscat.datatypes d5, syscat.datatypes d6, syscat.datatypes d7) else 2 end)":1,"ipsum incididun":1,"cupidatat lab":1,"AVAILABLE_askdjdw":1,"{{petstatusUpdate}}":1,"not available":1,"TESTE FODA-SE":1,"avaiable":1,"OK":1,"ok":7,"free":1} 
  </msg>
-<msg timestamp="20210910 14:42:18.622" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:17.447" endtime="20210910 14:42:18.622"/>
+<msg timestamp="20210910 15:03:14.778" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 15:03:13.710" endtime="20210910 15:03:14.778"/>
 </kw>
-<status status="PASS" starttime="20210910 14:42:17.446" endtime="20210910 14:42:18.622"/>
+<status status="PASS" starttime="20210910 15:03:13.709" endtime="20210910 15:03:14.778"/>
 </test>
-<test id="s1-t6" name="Swagger user logout Test">
+<test id="s1-t2" name="Swagger ustore_oder Test">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 14:42:18.624" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 14:42:18.624" endtime="20210910 14:42:18.624"/>
-</kw>
-<kw name="GET" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user/logout</arg>
-<arg>headers=${headers}</arg>
-<arg>data=${data_to_login}</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20210910 14:42:19.689" level="INFO">GET Request : url=https://petstore.swagger.io/v2/user/logout 
- path_url=/v2/user/logout 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '46'} 
- body=[{"username": "string", "password": "string"}] 
- </msg>
-<msg timestamp="20210910 14:42:19.690" level="INFO">GET Response : url=https://petstore.swagger.io/v2/user/logout 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:19 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"ok"} 
- </msg>
-<msg timestamp="20210910 14:42:19.690" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:18.624" endtime="20210910 14:42:19.690"/>
-</kw>
-<status status="PASS" starttime="20210910 14:42:18.623" endtime="20210910 14:42:19.691"/>
-</test>
-<test id="s1-t7" name="Swagger list user Test">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 14:42:19.692" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 14:42:19.692" endtime="20210910 14:42:19.692"/>
+<msg timestamp="20210910 15:03:14.780" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 15:03:14.780" endtime="20210910 15:03:14.780"/>
 </kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user/createWithArray</arg>
-<arg>headers=${headers}</arg>
-<arg>data=${data_list}</arg>
+<arg>https://petstore.swagger.io/v2/store/order</arg>
+<arg>data= ${data_oder}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20210910 14:42:21.767" level="INFO">POST Request : url=https://petstore.swagger.io/v2/user/createWithArray 
- path_url=/v2/user/createWithArray 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '155'} 
- body=[{"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0}] 
+<msg timestamp="20210910 15:03:15.786" level="INFO">POST Request : url=https://petstore.swagger.io/v2/store/order 
+ path_url=/v2/store/order 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '115'} 
+ body= {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-04T10:14:03.177Z", "status": "placed", "complete": True} 
  </msg>
-<msg timestamp="20210910 14:42:21.767" level="INFO">POST Response : url=https://petstore.swagger.io/v2/user/createWithArray 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:21 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"ok"} 
+<msg timestamp="20210910 15:03:15.787" level="INFO">POST Response : url=https://petstore.swagger.io/v2/store/order 
+ status=415, reason=Unsupported Media Type 
+ headers={'Date': 'Fri, 10 Sep 2021 12:03:15 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"code":415,"type":"unknown","message":"com.sun.jersey.api.MessageException: A message body reader for Java class io.swagger.sample.model.Order, and Java type class io.swagger.sample.model.Order, and MIME media type application/octet-stream was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/octet-stream -&gt;\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.RenderedImageProvider\n"} 
  </msg>
-<msg timestamp="20210910 14:42:21.767" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:19.692" endtime="20210910 14:42:21.768"/>
+<msg timestamp="20210910 15:03:15.789" level="FAIL">HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/store/order</msg>
+<status status="FAIL" starttime="20210910 15:03:14.780" endtime="20210910 15:03:15.789"/>
 </kw>
-<status status="PASS" starttime="20210910 14:42:19.691" endtime="20210910 14:42:21.768"/>
-</test>
-<test id="s1-t8" name="Swagger create user Test">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 14:42:21.770" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 14:42:21.769" endtime="20210910 14:42:21.770"/>
-</kw>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/user</arg>
-<arg>headers=${headers}</arg>
-<arg>data=${data}</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20210910 14:42:22.758" level="INFO">POST Request : url=https://petstore.swagger.io/v2/user 
- path_url=/v2/user 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '153'} 
- body={"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0} 
- </msg>
-<msg timestamp="20210910 14:42:22.758" level="INFO">POST Response : url=https://petstore.swagger.io/v2/user 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 11:42:22 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"9223372000666118087"} 
- </msg>
-<msg timestamp="20210910 14:42:22.758" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 14:42:21.770" endtime="20210910 14:42:22.758"/>
-</kw>
-<status status="PASS" starttime="20210910 14:42:21.769" endtime="20210910 14:42:22.759"/>
+<status status="FAIL" starttime="20210910 15:03:14.779" endtime="20210910 15:03:15.789">HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/store/order</status>
 </test>
 <doc>Example using the space separated format.
 Checking the information provided in the
 Robot Framework documentation.</doc>
-<status status="PASS" starttime="20210910 14:42:12.616" endtime="20210910 14:42:22.760"/>
+<status status="FAIL" starttime="20210910 15:03:13.640" endtime="20210910 15:03:15.790"/>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="8" fail="0" skip="0" id="s1" name="Users Tests">Users Tests</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Store Tests">Store Tests</stat>
 </suite>
 </statistics>
 <errors>

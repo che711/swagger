@@ -54,27 +54,6 @@ def store_inventory():
     return data
 
 @pytest.fixture()
-def store_inventory():
-    data = {
-          "sold": randint(1, 10),
-          "string": randint(1, 100),
-          "pending": randint(1, 100),
-          "available": randint(1, 1000)
-        }
-    return data
-
-@pytest.fixture()
-def store_inventory():
-    data = {
-          "sold": randint(1, 10),
-          "string": randint(1, 100),
-          "pending": randint(1, 100),
-          "available": randint(1, 1000)
-        }
-    return data
-
-
-@pytest.fixture()
 def store_oder():
     data = {
           "id": 0,
