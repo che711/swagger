@@ -35,7 +35,7 @@ Swagger delete pet Test
     ${response}=       DELETE      https://petstore.swagger.io/v2/pet/5
 
 Swagger update image Test
-#    Pass execution     This test may fail due to a small number of requests to the server
+    Pass execution     This test may fail due to a small number of requests to the server
     ${response}=       POST      https://petstore.swagger.io/v2/pet/2/uploadImage
 
 
