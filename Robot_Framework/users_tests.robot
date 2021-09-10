@@ -21,7 +21,7 @@ Swagger user get username Test
     ${response}=    GET  https://petstore.swagger.io/v2/user/string
 
 Swagger user post createWithList Test
-    ${headers}      Create Dictionary  Content-Type=application/json
+    ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
     ${response}=    POST  https://petstore.swagger.io/v2/user/createWithList  data= ${data}   headers=${headers}
 
 Swagger user put username Test
