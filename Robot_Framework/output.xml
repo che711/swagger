@@ -1,88 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 15:59:03.697" rpa="false" schemaversion="2">
-<suite id="s1" name="Store Tests" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/store_tests.robot">
-<test id="s1-t1" name="Swagger store inventory Test">
+<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 16:23:07.197" rpa="false" schemaversion="2">
+<suite id="s1" name="Pet Tests" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/pet_tests.robot">
+<test id="s1-t1" name="Swagger add new pet Test">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 15:59:03.773" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 15:59:03.772" endtime="20210910 15:59:03.773"/>
-</kw>
-<kw name="GET" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/store/inventory</arg>
-<arg>data= ${data}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20210910 15:59:04.782" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/inventory 
- path_url=/v2/store/inventory 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '111'} 
- body= {"sold": randint(1, 10), "string": randint(1, 100), "pending": randint(1, 100), "available": randint(1, 1000)} 
- </msg>
-<msg timestamp="20210910 15:59:04.782" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/inventory 
- status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 12:59:04 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"sold":11,"string":190,"pendind":1,"unavailable":1,"pending":13,"available":688,"avalible":1,"Not Available":1,"{{pet2Status}}":1,"pending and 1=(case 1 when 0 then (select count(*) from syscat.datatypes d1, syscat.datatypes d2, syscat.datatypes d3, syscat.datatypes d4, syscat.datatypes d5, syscat.datatypes d6, syscat.datatypes d7) else 2 end)":1,"ipsum incididun":1,"cupidatat lab":1,"Beschikbaar":1,"AVAILABLE_askdjdw":1,"{{petstatusUpdate}}":1,"not available":1,"TESTE FODA-SE":1,"avaiable":1,"OK":1,"ok":7,"free":1} 
- </msg>
-<msg timestamp="20210910 15:59:04.783" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 15:59:03.773" endtime="20210910 15:59:04.783"/>
-</kw>
-<status status="PASS" starttime="20210910 15:59:03.772" endtime="20210910 15:59:04.783"/>
-</test>
-<test id="s1-t2" name="Swagger ustore oder Test">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 15:59:04.785" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 15:59:04.784" endtime="20210910 15:59:04.785"/>
+<msg timestamp="20210910 16:23:07.266" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 16:23:07.266" endtime="20210910 16:23:07.266"/>
 </kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${response}</var>
-<arg>https://petstore.swagger.io/v2/store/order</arg>
-<arg>data= ${data_oder}</arg>
+<arg>https://petstore.swagger.io/v2/pet</arg>
+<arg>data= ${data_pet}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20210910 15:59:05.773" level="INFO">POST Request : url=https://petstore.swagger.io/v2/store/order 
- path_url=/v2/store/order 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '115'} 
- body= {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true} 
+<msg timestamp="20210910 16:23:08.299" level="INFO">POST Request : url=https://petstore.swagger.io/v2/pet 
+ path_url=/v2/pet 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '157'} 
+ body= {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"} 
  </msg>
-<msg timestamp="20210910 15:59:05.773" level="INFO">POST Response : url=https://petstore.swagger.io/v2/store/order 
+<msg timestamp="20210910 16:23:08.299" level="INFO">POST Response : url=https://petstore.swagger.io/v2/pet 
  status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 12:59:05 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":9223372036854775807,"petId":0,"quantity":0,"shipDate":"2021-09-10T12:12:18.589+0000","status":"placed","complete":true} 
+ headers={'Date': 'Fri, 10 Sep 2021 13:23:08 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"} 
  </msg>
-<msg timestamp="20210910 15:59:05.774" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 15:59:04.785" endtime="20210910 15:59:05.774"/>
+<msg timestamp="20210910 16:23:08.300" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 16:23:07.266" endtime="20210910 16:23:08.300"/>
 </kw>
-<status status="PASS" starttime="20210910 15:59:04.784" endtime="20210910 15:59:05.774"/>
+<status status="PASS" starttime="20210910 16:23:07.265" endtime="20210910 16:23:08.300"/>
 </test>
-<test id="s1-t3" name="Swagger ustore oder id Test">
-<kw name="Pass Execution" library="BuiltIn">
-<arg>This test may fall</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20210910 15:59:05.776" level="INFO">Execution passed with message:
-This test may fall</msg>
-<status status="PASS" starttime="20210910 15:59:05.776" endtime="20210910 15:59:05.776"/>
+<test id="s1-t2" name="Swagger update pet Test">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json; charset=utf-8</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210910 16:23:08.304" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 16:23:08.303" endtime="20210910 16:23:08.304"/>
 </kw>
-<status status="PASS" starttime="20210910 15:59:05.775" endtime="20210910 15:59:05.776">This test may fall</status>
+<kw name="PUT" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://petstore.swagger.io/v2/pet</arg>
+<arg>data= ${data_pet}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a PUT request.</doc>
+<msg timestamp="20210910 16:23:09.295" level="INFO">PUT Request : url=https://petstore.swagger.io/v2/pet 
+ path_url=/v2/pet 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '157'} 
+ body= {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"} 
+ </msg>
+<msg timestamp="20210910 16:23:09.295" level="INFO">PUT Response : url=https://petstore.swagger.io/v2/pet 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 10 Sep 2021 13:23:09 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"} 
+ </msg>
+<msg timestamp="20210910 16:23:09.296" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 16:23:08.304" endtime="20210910 16:23:09.297"/>
+</kw>
+<status status="PASS" starttime="20210910 16:23:08.301" endtime="20210910 16:23:09.297"/>
 </test>
-<test id="s1-t4" name="Swagger ustore oder delete Test">
-<kw name="Pass Execution" library="BuiltIn">
-<arg>This test may fall</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<msg timestamp="20210910 15:59:05.777" level="INFO">Execution passed with message:
-This test may fall</msg>
-<status status="PASS" starttime="20210910 15:59:05.777" endtime="20210910 15:59:05.777"/>
+<test id="s1-t3" name="Swagger find pet Test">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json; charset=utf-8</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210910 16:23:09.298" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 16:23:09.298" endtime="20210910 16:23:09.298"/>
 </kw>
-<status status="PASS" starttime="20210910 15:59:05.777" endtime="20210910 15:59:05.778">This test may fall</status>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://petstore.swagger.io/v2/pet/findByStatus</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20210910 16:23:10.268" level="INFO">GET Request : url=https://petstore.swagger.io/v2/pet/findByStatus 
+ path_url=/v2/pet/findByStatus 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210910 16:23:10.269" level="INFO">GET Response : url=https://petstore.swagger.io/v2/pet/findByStatus 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 10 Sep 2021 13:23:10 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body=[] 
+ </msg>
+<msg timestamp="20210910 16:23:10.269" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 16:23:09.298" endtime="20210910 16:23:10.269"/>
+</kw>
+<status status="PASS" starttime="20210910 16:23:09.297" endtime="20210910 16:23:10.270"/>
+</test>
+<test id="s1-t4" name="Swagger find pet by id Test">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json; charset=utf-8</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210910 16:23:10.271" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 16:23:10.270" endtime="20210910 16:23:10.271"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://petstore.swagger.io/v2/pet/1</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20210910 16:23:11.283" level="INFO">GET Request : url=https://petstore.swagger.io/v2/pet/1 
+ path_url=/v2/pet/1 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210910 16:23:11.284" level="INFO">GET Response : url=https://petstore.swagger.io/v2/pet/1 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 10 Sep 2021 13:23:11 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":1,"category":{"id":0},"name":"pet001","photoUrls":[],"tags":[],"status":"ok"} 
+ </msg>
+<msg timestamp="20210910 16:23:11.284" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 16:23:10.271" endtime="20210910 16:23:11.285"/>
+</kw>
+<status status="PASS" starttime="20210910 16:23:10.270" endtime="20210910 16:23:11.285"/>
 </test>
 <doc>Example using the space separated format.
 Checking the information provided in the
 Robot Framework documentation.</doc>
-<status status="PASS" starttime="20210910 15:59:03.698" endtime="20210910 15:59:05.778"/>
+<status status="PASS" starttime="20210910 16:23:07.198" endtime="20210910 16:23:11.286"/>
 </suite>
 <statistics>
 <total>
@@ -91,19 +125,9 @@ Robot Framework documentation.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Store Tests">Store Tests</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Pet Tests">Pet Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210910 15:59:03.771" level="ERROR">Error in file '/home/chernomorov/Desktop/projects/swagger/Robot_Framework/store_tests.robot' on line 7: Importing library 'AllureReportLibrary' failed: ModuleNotFoundError: No module named 'AllureListener'
-Traceback (most recent call last):
-  File "/home/chernomorov/Desktop/projects/swagger/venv/lib/python3.8/site-packages/AllureReportLibrary/__init__.py", line 2, in &lt;module&gt;
-    from AllureListener import *
-PYTHONPATH:
-  /home/chernomorov/Desktop/projects/swagger/venv/bin
-  /usr/lib/python38.zip
-  /usr/lib/python3.8
-  /usr/lib/python3.8/lib-dynload
-  /home/chernomorov/Desktop/projects/swagger/venv/lib/python3.8/site-packages</msg>
 </errors>
 </robot>

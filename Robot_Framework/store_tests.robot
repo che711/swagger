@@ -5,10 +5,12 @@ Documentation     Example using the space separated format.
 Library           RequestsLibrary
 Library           Collections
 
+
 *** Variables ***
 ${Base_URL}       https://petstore.swagger.io/v2
 ${data}           {"sold": randint(1, 10), "string": randint(1, 100), "pending": randint(1, 100), "available": randint(1, 1000)}
 ${data_oder}      {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true}
+
 
 *** Test Cases ***
 Swagger store inventory Test
