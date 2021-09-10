@@ -22,18 +22,21 @@ Swagger find pet Test
     ${response}=    GET      https://petstore.swagger.io/v2/pet/findByStatus
 
 Swagger find pet by id Test
-#    Pass execution     This test may fail due to a small number of requests to the server
+    Pass execution     This test may fail due to a small number of requests to the server
     ${headers}         Create Dictionary  Content-Type=application/json; charset=utf-8
     ${response}=       GET      https://petstore.swagger.io/v2/pet/1
 
 Swagger update pet by form Test
-#    Pass execution     This test may fail due to a small number of requests to the server
+    Pass execution     This test may fail due to a small number of requests to the server
     ${response}=       POST      https://petstore.swagger.io/v2/pet/1
 
 Swagger delete pet Test
-#    Pass execution     This test may fail due to a small number of requests to the server
+    Pass execution     This test may fail due to a small number of requests to the server
     ${response}=       DELETE      https://petstore.swagger.io/v2/pet/5
 
+Swagger update image Test
+#    Pass execution     This test may fail due to a small number of requests to the server
+    ${response}=       POST      https://petstore.swagger.io/v2/pet/2/uploadImage
 
 
 
