@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 15:03:13.639" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 15:18:41.657" rpa="false" schemaversion="2">
 <suite id="s1" name="Store Tests" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/store_tests.robot">
 <test id="s1-t1" name="Swagger store inventory Test">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 15:03:13.710" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 15:03:13.710" endtime="20210910 15:03:13.710"/>
+<msg timestamp="20210910 15:18:41.723" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 15:18:41.723" endtime="20210910 15:18:41.723"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
@@ -15,62 +15,92 @@
 <arg>data= ${data}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20210910 15:03:14.777" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/inventory 
+<msg timestamp="20210910 15:18:42.728" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/inventory 
  path_url=/v2/store/inventory 
  headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '111'} 
  body= {"sold": randint(1, 10), "string": randint(1, 100), "pending": randint(1, 100), "available": randint(1, 1000)} 
  </msg>
-<msg timestamp="20210910 15:03:14.777" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/inventory 
+<msg timestamp="20210910 15:18:42.729" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/inventory 
  status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 12:03:14 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"sold":10,"string":194,"pendind":1,"unavailable":1,"pending":13,"available":684,"avalible":1,"Not Available":1,"{{pet2Status}}":1,"pending and 1=(case 1 when 0 then (select count(*) from syscat.datatypes d1, syscat.datatypes d2, syscat.datatypes d3, syscat.datatypes d4, syscat.datatypes d5, syscat.datatypes d6, syscat.datatypes d7) else 2 end)":1,"ipsum incididun":1,"cupidatat lab":1,"AVAILABLE_askdjdw":1,"{{petstatusUpdate}}":1,"not available":1,"TESTE FODA-SE":1,"avaiable":1,"OK":1,"ok":7,"free":1} 
+ headers={'Date': 'Fri, 10 Sep 2021 12:18:42 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"sold":14,"string":191,"Adopted":1,"Busy":1,"pending":9,"available":711,"{{pet1Status}}":1,"{{pet3Status}}":1,"ok":7,"OK":1,"free":1,"TEXTO MINUSCULO TESTE":1,"status":1} 
  </msg>
-<msg timestamp="20210910 15:03:14.778" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 15:03:13.710" endtime="20210910 15:03:14.778"/>
+<msg timestamp="20210910 15:18:42.729" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 15:18:41.723" endtime="20210910 15:18:42.729"/>
 </kw>
-<status status="PASS" starttime="20210910 15:03:13.709" endtime="20210910 15:03:14.778"/>
+<status status="PASS" starttime="20210910 15:18:41.722" endtime="20210910 15:18:42.730"/>
 </test>
-<test id="s1-t2" name="Swagger ustore_oder Test">
+<test id="s1-t2" name="Swagger ustore oder Test">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210910 15:03:14.780" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210910 15:03:14.780" endtime="20210910 15:03:14.780"/>
+<msg timestamp="20210910 15:18:42.731" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 15:18:42.731" endtime="20210910 15:18:42.731"/>
 </kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${response}</var>
 <arg>https://petstore.swagger.io/v2/store/order</arg>
 <arg>data= ${data_oder}</arg>
+<arg>headers=${headers}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20210910 15:03:15.786" level="INFO">POST Request : url=https://petstore.swagger.io/v2/store/order 
+<msg timestamp="20210910 15:18:43.749" level="INFO">POST Request : url=https://petstore.swagger.io/v2/store/order 
  path_url=/v2/store/order 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '115'} 
- body= {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-04T10:14:03.177Z", "status": "placed", "complete": True} 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '115'} 
+ body= {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true} 
  </msg>
-<msg timestamp="20210910 15:03:15.787" level="INFO">POST Response : url=https://petstore.swagger.io/v2/store/order 
- status=415, reason=Unsupported Media Type 
- headers={'Date': 'Fri, 10 Sep 2021 12:03:15 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":415,"type":"unknown","message":"com.sun.jersey.api.MessageException: A message body reader for Java class io.swagger.sample.model.Order, and Java type class io.swagger.sample.model.Order, and MIME media type application/octet-stream was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/octet-stream -&gt;\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.RenderedImageProvider\n"} 
+<msg timestamp="20210910 15:18:43.750" level="INFO">POST Response : url=https://petstore.swagger.io/v2/store/order 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 10 Sep 2021 12:18:43 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":9223372036854775807,"petId":0,"quantity":0,"shipDate":"2021-09-10T12:12:18.589+0000","status":"placed","complete":true} 
  </msg>
-<msg timestamp="20210910 15:03:15.789" level="FAIL">HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/store/order</msg>
-<status status="FAIL" starttime="20210910 15:03:14.780" endtime="20210910 15:03:15.789"/>
+<msg timestamp="20210910 15:18:43.750" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 15:18:42.731" endtime="20210910 15:18:43.751"/>
 </kw>
-<status status="FAIL" starttime="20210910 15:03:14.779" endtime="20210910 15:03:15.789">HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/store/order</status>
+<status status="PASS" starttime="20210910 15:18:42.730" endtime="20210910 15:18:43.751"/>
+</test>
+<test id="s1-t3" name="Swagger ustore oder id Test">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json; charset=utf-8</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210910 15:18:43.753" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 15:18:43.752" endtime="20210910 15:18:43.753"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://petstore.swagger.io/v2/store/order/2</arg>
+<arg>data= ${data_oder}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20210910 15:18:44.798" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/order/2 
+ path_url=/v2/store/order/2 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '115'} 
+ body= {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true} 
+ </msg>
+<msg timestamp="20210910 15:18:44.798" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/order/2 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 10 Sep 2021 12:18:44 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":2,"petId":0,"quantity":0,"shipDate":"2021-09-05T11:58:23.820+0000","status":"placed","complete":true} 
+ </msg>
+<msg timestamp="20210910 15:18:44.798" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 15:18:43.753" endtime="20210910 15:18:44.799"/>
+</kw>
+<status status="PASS" starttime="20210910 15:18:43.752" endtime="20210910 15:18:44.799"/>
 </test>
 <doc>Example using the space separated format.
 Checking the information provided in the
 Robot Framework documentation.</doc>
-<status status="FAIL" starttime="20210910 15:03:13.640" endtime="20210910 15:03:15.790"/>
+<status status="PASS" starttime="20210910 15:18:41.658" endtime="20210910 15:18:44.800"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Store Tests">Store Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Store Tests">Store Tests</stat>
 </suite>
 </statistics>
 <errors>
