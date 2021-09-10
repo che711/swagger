@@ -15,6 +15,6 @@ Swagger store inventory Test
     ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
     ${response}=    GET      https://petstore.swagger.io/v2/store/inventory  data= ${data}       headers=${headers}
 
-Swagger ustore_oder Test
-    ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
-    ${response}=    POST     https://petstore.swagger.io/v2/store/order     data= ${data_oder}   headers=${headers}
+#Swagger ustore_oder Test
+#    ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
+#    ${response}=    POST     https://petstore.swagger.io/v2/store/order     data= ${data_oder}   headers=${headers}
