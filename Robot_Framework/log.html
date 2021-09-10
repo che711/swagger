@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 4.1.1 (Python 3.8.10 on linux)" name="Generator">
+<meta content="Robot Framework 4.1 (Python 3.8.10 on linux)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
@@ -1388,10 +1388,7 @@ window.testdata = function () {
     function createBodyItem(parent, element, strings, index) {
         if (element[0] == MESSAGE_TYPE)
             return createMessage(element, strings);
-        var messages = util.filter(parent.children(), function (child) {
-            return child.type == 'message';
-        })
-        return createKeyword(parent, element, strings, index - messages.length);
+        return createKeyword(parent, element, strings, index);
     }
     function createKeyword(parent, element, strings, index) {
         var kw = model.Keyword({
@@ -1799,39 +1796,25 @@ function stopPropagation(event) {
 window.output = {};
 </script>
 <script type="text/javascript">
-<<<<<<< HEAD
-window.output["suite"] = [1,2,3,0,[],[0,0,45],[],[[4,0,0,[],[0,40,1,5],[]],[6,0,0,[],[0,43,1,5],[]]],[],[2,0,2,0]];
-=======
-window.output["suite"] = [1,2,3,4,[],[0,0,1073],[],[[5,0,0,[],[1,62,995],[[0,6,7,0,8,9,10,0,[1,62,994],[[8,1053,2,11],[8,1055,2,12],[8,1056,2,13]]]]],[14,0,0,[],[0,1058,13,15],[[0,16,7,0,17,18,10,0,[0,1061,1],[[8,1062,5,15]]],[0,19,0,0,0,20,0,0,[3,1070,0],[]],[0,21,22,0,23,24,0,0,[3,1070,1],[]]]]],[],[2,1,1,0]];
->>>>>>> 413fd6401b1f4a5290eacd5480476f00210c0850
+window.output["suite"] = [1,2,3,4,[],[1,0,783],[],[[5,0,0,[],[1,124,656],[[0,6,7,0,8,9,10,0,[1,125,654],[[8,778,2,11],[8,779,2,12],[8,779,2,13]]]]]],[],[1,1,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Example","*/home/chernomorov/Desktop/projects/swagger/Robot_Framework/example.robot","*example.robot","*<p>Example using the space separated format. Checking the information provided in the Robot Framework documentation.\x3c/p>","*Swagger user get username Test","*GET","*RequestsLibrary","*<p>Sends a GET request.\x3c/p>","*<a href=\"https://petstore.swagger.io/v2/user/string\">https://petstore.swagger.io/v2/user/string\x3c/a>","*${response}","*GET Request : url=https://petstore.swagger.io/v2/user/string \n path_url=/v2/user/string \n headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n ","eNp1Uk1P4zAQve+vsHIJrPLhmt1CIuVQaNTVAtsVDWdkkqExDbblmbQqaP/72u1qBQculvzmvTczz17UDbsDtEYjsJKNbqh6IotlnlsgJOMgw51cr8FlyuRbkY8ILkdySq/ZF4YkacRKcJ4wBxKNrpbXHu9BduCweovnkiAuWdz0Y8J4wVZgmeBiwibnpRCl4Gxx28QJi6+MJtCUNnt7EEhrB9VKUkbnz944cBonNT6BS2vdms6PEIhtP+oNdP88NLRBEgobAJvKQW0h1GZtC4hpaOPMkM6GwezSpVNrdSB//ZRzC9SbDgNpUTcJ+71c+XNe39RN7W/3zafKH8cUgvL9dgmTVj1sYJ+w2ei9nXo9rBl8VuC24ILiJxDtT4pMZEW2FXzynQvx7TT+49N9NN2+eotUF5WFEGdn5z5/Pp1OecH5RZFE4Y20fIGojI4vFSXRk3JIv47g3AcjNx4c5H/sspdEHoIXqYb3QisRd8Z1H7De6A/uoePq8BeikocR/wLTuL8c","*${response} = &lt;Response [200]&gt;","*Swagger user post createWithList Test","*Keyword 'RequestsLibrary.POST' got positional argument after named arguments.","*POST","*<p>Sends a POST request.\x3c/p>","eNqVyzEKgDAMRuGrFHEsBhxFPYG7c9Bf26kliTqIdxfFC7h9PHgtuyBYuiKYZW2IMkwtCSo9eF0hVUy017QphCYBG8ZoYYhqRf//aYl77wJ4hmjnXXl+vryb2fhND64bvFA3BA==","*${code}= converse to string","*${response.status_code}","*Should Be Equal","*BuiltIn","*<p>Fails if the given objects are unequal.\x3c/p>","*${code}, 200"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Example","*/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/example.robot","*example.robot","*<p>Example using the space separated format. Checking the information provided in the Robot Framework documentation.\x3c/p>","*Swagger user get username Test","*GET","*RequestsLibrary","*<p>Sends a GET request.\x3c/p>","*<a href=\"https://petstore.swagger.io/v2/user/string\">https://petstore.swagger.io/v2/user/string\x3c/a>","*${response}","*GET Request : url=https://petstore.swagger.io/v2/user/string \n path_url=/v2/user/string \n headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n ","eNp1Ustu2zAQvPcrCF3UFHrQtKvGAnQwGsVB2tRBrJ4DVtpYrGWS2KVsuEb/vaLTg53AFwI7OzP74rys2BOQNZqA5azHrmids5SnqQVHziAktJOrFWCiTLoVaU+AKTlUesU+MHLS9VQIziOGIMnoYvFtwFuQDSAVh/BGOghzFt6iitiIsyVYJrgYMZ7lo0k+vmbzhyqMWPjVaAfaxdXeHgXS2k7V0imj09+DsedUKDW9AMalrk0ztOCJddvrNTT/PTTUXuITawAby05twedmdQ1EsS+DpotnXWd28QLVSh3Jny5yHsC1piFPmpdVxB4Xy+G9Kb+XVTlEP6uLyrvXLXjl6XQRk1Y9r2EfsVk/eKP6cxzT+ywBt4BecQ/O7T9OE5FMk63go89ciMlV+HfY7i/T7ItDoJognwoxHn8Z9s+zLONTPs54FPgbabmBIA9eLxVEwYtCcj/egJ18j8FGqu4UsJJoZ7A5w1qjz1S+5PL4GYKc+x7/AaYiv/U=","*${response} = &lt;Response [200]&gt;"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:01","fail":1,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:01","fail":1,"id":"s1","label":"Example","name":"Example","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:01","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:01","fail":0,"id":"s1","label":"Example","name":"Example","pass":1,"skip":0}]];
 </script>
 <script type="text/javascript">
-<<<<<<< HEAD
-window.output["errors"] = [[8,1,4,7],[8,39,4,8]];
-</script>
-<script type="text/javascript">
-window.output["baseMillis"] = 1631252081399;
-</script>
-<script type="text/javascript">
-window.output["generated"] = 51;
-=======
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1631208139292;
+window.output["baseMillis"] = 1631254477952;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 1082;
->>>>>>> 413fd6401b1f4a5290eacd5480476f00210c0850
+window.output["generated"] = 791;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
