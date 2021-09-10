@@ -25,12 +25,20 @@ Swagger user put username Test
 
 Swagger user del username Test
     ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
-    ${response}=    DELETE   https://petstore.swagger.io/v2/user/string    headers=${headers}
+    ${response}=    DELETE   https://petstore.swagger.io/v2/user/string     headers=${headers}
 
 Swagger user login Test
     ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
-    ${response}=    GET     https://petstore.swagger.io/v2/user/login    headers=${headers}    data=${data_to_login}
+    ${response}=    GET     https://petstore.swagger.io/v2/user/login       headers=${headers}    data=${data_to_login}
 
 Swagger user logout Test
     ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
-    ${response}=    GET     https://petstore.swagger.io/v2/user/logout    headers=${headers}    data=${data_to_login}
+    ${response}=    GET     https://petstore.swagger.io/v2/user/logout       headers=${headers}    data=${data_to_login}
+
+Swagger list user Test
+    ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
+    ${response}=    POST     https://petstore.swagger.io/v2/user/createWithArray    headers=${headers}    data=${data_list}
+
+Swagger create user Test
+    ${headers}      Create Dictionary  Content-Type=application/json; charset=utf-8
+    ${response}=    POST     https://petstore.swagger.io/v2/user    headers=${headers}    data=${data}

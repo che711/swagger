@@ -2,4 +2,5 @@ pytest
 requests
 selenium
 allure-pytest
-robot
+robotframework
+robotframework-requests
