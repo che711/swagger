@@ -1,65 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 12:55:26.238" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 14:06:02.560" rpa="false" schemaversion="2">
 <suite id="s1" name="Example" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/example.robot">
 <test id="s1-t1" name="Swagger user get username Test">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>https://petstore.swagger.io/v2/user/string</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20210910 12:55:27.358" level="INFO">GET Request : url=https://petstore.swagger.io/v2/user/string 
+<msg timestamp="20210910 14:06:03.639" level="INFO">GET Request : url=https://petstore.swagger.io/v2/user/string 
  path_url=/v2/user/string 
  headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20210910 12:55:27.359" level="INFO">GET Response : url=https://petstore.swagger.io/v2/user/string 
+<msg timestamp="20210910 14:06:03.639" level="INFO">GET Response : url=https://petstore.swagger.io/v2/user/string 
  status=200, reason=OK 
- headers={'Date': 'Fri, 10 Sep 2021 09:55:27 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":9223372000666090360,"username":"string","firstName":"string","lastName":"string","email":"string","password":"string","phone":"string","userStatus":0} 
+ headers={'Date': 'Fri, 10 Sep 2021 11:06:03 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":9223372000666090426,"username":"string","firstName":"string","lastName":"string","email":"string","password":"string","phone":"string","userStatus":0} 
  </msg>
-<msg timestamp="20210910 12:55:27.359" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210910 12:55:26.309" endtime="20210910 12:55:27.359"/>
+<msg timestamp="20210910 14:06:03.639" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 14:06:02.646" endtime="20210910 14:06:03.640"/>
 </kw>
-<status status="PASS" starttime="20210910 12:55:26.308" endtime="20210910 12:55:27.359"/>
+<status status="PASS" starttime="20210910 14:06:02.645" endtime="20210910 14:06:03.640"/>
 </test>
 <test id="s1-t2" name="Swagger user post createWithList Test">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210910 14:06:03.644" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20210910 14:06:03.643" endtime="20210910 14:06:03.644"/>
+</kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${response}</var>
 <arg>https://petstore.swagger.io/v2/user/createWithList</arg>
-<arg>headers=</arg>
-<arg>${headers}</arg>
-<arg>data=</arg>
-<arg>${data}</arg>
+<arg>data= ${data}</arg>
+<arg>headers=${headers}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20210910 12:55:27.361" level="FAIL">Keyword 'RequestsLibrary.POST' got positional argument after named arguments.</msg>
-<status status="FAIL" starttime="20210910 12:55:27.360" endtime="20210910 12:55:27.361"/>
+<msg timestamp="20210910 14:06:04.681" level="INFO">POST Request : url=https://petstore.swagger.io/v2/user/createWithList 
+ path_url=/v2/user/createWithList 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '156'} 
+ body= [{"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0}] 
+ </msg>
+<msg timestamp="20210910 14:06:04.682" level="INFO">POST Response : url=https://petstore.swagger.io/v2/user/createWithList 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 10 Sep 2021 11:06:04 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"code":200,"type":"unknown","message":"ok"} 
+ </msg>
+<msg timestamp="20210910 14:06:04.682" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 14:06:03.644" endtime="20210910 14:06:04.682"/>
 </kw>
-<kw name="${code}= converse to string">
-<arg>${response.status_code}</arg>
-<status status="NOT RUN" starttime="20210910 12:55:27.362" endtime="20210910 12:55:27.362"/>
+<status status="PASS" starttime="20210910 14:06:03.641" endtime="20210910 14:06:04.683"/>
+</test>
+<test id="s1-t3" name="Swagger user put username Test">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json; charset=utf-8</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210910 14:06:04.688" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<status status="PASS" starttime="20210910 14:06:04.687" endtime="20210910 14:06:04.688"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${code}</arg>
-<arg>200</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20210910 12:55:27.362" endtime="20210910 12:55:27.362"/>
+<kw name="PUT" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://petstore.swagger.io/v2/user/string</arg>
+<arg>data=${data_2}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a PUT request.</doc>
+<msg timestamp="20210910 14:06:05.676" level="INFO">PUT Request : url=https://petstore.swagger.io/v2/user/string 
+ path_url=/v2/user/string 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '153'} 
+ body={"id": 0, "username": "string", "firstName": "string", "lastName": "string", "email": "string", "password": "string", "phone": "string", "userStatus": 0} 
+ </msg>
+<msg timestamp="20210910 14:06:05.676" level="INFO">PUT Response : url=https://petstore.swagger.io/v2/user/string 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 10 Sep 2021 11:06:05 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"code":200,"type":"unknown","message":"9223372000666118028"} 
+ </msg>
+<msg timestamp="20210910 14:06:05.677" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 14:06:04.688" endtime="20210910 14:06:05.677"/>
 </kw>
-<status status="FAIL" starttime="20210910 12:55:27.360" endtime="20210910 12:55:27.362">Keyword 'RequestsLibrary.POST' got positional argument after named arguments.</status>
+<status status="PASS" starttime="20210910 14:06:04.684" endtime="20210910 14:06:05.677"/>
 </test>
 <doc>Example using the space separated format.
 Checking the information provided in the
 Robot Framework documentation.</doc>
-<status status="FAIL" starttime="20210910 12:55:26.239" endtime="20210910 12:55:27.363"/>
+<status status="PASS" starttime="20210910 14:06:02.561" endtime="20210910 14:06:05.680"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Example">Example</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Example">Example</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20210910 14:06:02.644" level="ERROR">Error in file '/home/chernomorov/Desktop/projects/swagger/Robot_Framework/example.robot' on line 8: Importing library 'ExtendedRequestsLibrary' failed: ModuleNotFoundError: No module named 'ExtendedRequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/chernomorov/Desktop/projects/swagger/venv/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/chernomorov/Desktop/projects/swagger/venv/lib/python3.8/site-packages</msg>
 </errors>
 </robot>
