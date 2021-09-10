@@ -16,10 +16,10 @@ ${data_2}         {"id": 0, "username": "string", "firstName": "string", "lastNa
 Swagger user get username Test
     ${response}=    GET  https://petstore.swagger.io/v2/user/string
 
-#Swagger user post createWithList Test
-#    ${response}=    POST  https://petstore.swagger.io/v2/user/createWithList  headers=  ${headers}  data=  ${data}
-#    ${code}= converse to string  ${response.status_code}
-#    should be equal  ${code}  200
+Swagger user post createWithList Test
+    ${response}=    POST  https://petstore.swagger.io/v2/user/createWithList  headers=  ${headers}  data=  ${data}
+    ${code}= converse to string  ${response.status_code}
+    should be equal  ${code}  200
 
 #Swagger Test create new resourse
 #    TC001_PostRequest create session petstore   https://petstore.swagger.io/v2/user/string

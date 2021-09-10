@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210910 08:34:41.398" rpa="false" schemaversion="2">
-<suite id="s1" name="Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/tests.robot">
-<test id="s1-t1" name="Quick Get Request Test">
-<status status="FAIL" starttime="20210910 08:34:41.439" endtime="20210910 08:34:41.440">Test case contains no keywords.</status>
-</test>
-<test id="s1-t2" name="${response}= GET https://petstore.swagger.io/v2/user/string expected_status=200">
-<status status="FAIL" starttime="20210910 08:34:41.442" endtime="20210910 08:34:41.443">Test case contains no keywords.</status>
-</test>
-<status status="FAIL" starttime="20210910 08:34:41.399" endtime="20210910 08:34:41.444"/>
-=======
-<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210909 20:22:19.291" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20210910 12:55:26.238" rpa="false" schemaversion="2">
 <suite id="s1" name="Example" source="/home/chernomorov/Desktop/projects/swagger/Robot_Framework/example.robot">
 <test id="s1-t1" name="Swagger user get username Test">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>https://petstore.swagger.io/v2/user/string</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20210909 20:22:20.345" level="INFO">GET Request : url=https://petstore.swagger.io/v2/user/string 
+<msg timestamp="20210910 12:55:27.358" level="INFO">GET Request : url=https://petstore.swagger.io/v2/user/string 
  path_url=/v2/user/string 
  headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20210909 20:22:20.347" level="INFO">GET Response : url=https://petstore.swagger.io/v2/user/string 
+<msg timestamp="20210910 12:55:27.359" level="INFO">GET Response : url=https://petstore.swagger.io/v2/user/string 
  status=200, reason=OK 
- headers={'Date': 'Thu, 09 Sep 2021 17:22:20 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":9223372000666090089,"username":"string","firstName":"Deepak","lastName":"Bhatt","email":"string","password":"string","phone":"string","userStatus":0} 
+ headers={'Date': 'Fri, 10 Sep 2021 09:55:27 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":9223372000666090360,"username":"string","firstName":"string","lastName":"string","email":"string","password":"string","phone":"string","userStatus":0} 
  </msg>
-<msg timestamp="20210909 20:22:20.348" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210909 20:22:19.354" endtime="20210909 20:22:20.348"/>
+<msg timestamp="20210910 12:55:27.359" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210910 12:55:26.309" endtime="20210910 12:55:27.359"/>
 </kw>
-<status status="PASS" starttime="20210909 20:22:19.354" endtime="20210909 20:22:20.349"/>
+<status status="PASS" starttime="20210910 12:55:26.308" endtime="20210910 12:55:27.359"/>
 </test>
 <test id="s1-t2" name="Swagger user post createWithList Test">
 <kw name="POST" library="RequestsLibrary">
@@ -41,26 +30,25 @@
 <arg>data=</arg>
 <arg>${data}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20210909 20:22:20.354" level="FAIL">Keyword 'RequestsLibrary.POST' got positional argument after named arguments.</msg>
-<status status="FAIL" starttime="20210909 20:22:20.353" endtime="20210909 20:22:20.354"/>
+<msg timestamp="20210910 12:55:27.361" level="FAIL">Keyword 'RequestsLibrary.POST' got positional argument after named arguments.</msg>
+<status status="FAIL" starttime="20210910 12:55:27.360" endtime="20210910 12:55:27.361"/>
 </kw>
 <kw name="${code}= converse to string">
 <arg>${response.status_code}</arg>
-<status status="NOT RUN" starttime="20210909 20:22:20.362" endtime="20210909 20:22:20.362"/>
+<status status="NOT RUN" starttime="20210910 12:55:27.362" endtime="20210910 12:55:27.362"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${code}</arg>
 <arg>200</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20210909 20:22:20.362" endtime="20210909 20:22:20.363"/>
+<status status="NOT RUN" starttime="20210910 12:55:27.362" endtime="20210910 12:55:27.362"/>
 </kw>
-<status status="FAIL" starttime="20210909 20:22:20.350" endtime="20210909 20:22:20.363">Keyword 'RequestsLibrary.POST' got positional argument after named arguments.</status>
+<status status="FAIL" starttime="20210910 12:55:27.360" endtime="20210910 12:55:27.362">Keyword 'RequestsLibrary.POST' got positional argument after named arguments.</status>
 </test>
 <doc>Example using the space separated format.
 Checking the information provided in the
 Robot Framework documentation.</doc>
-<status status="FAIL" starttime="20210909 20:22:19.292" endtime="20210909 20:22:20.365"/>
->>>>>>> 413fd6401b1f4a5290eacd5480476f00210c0850
+<status status="FAIL" starttime="20210910 12:55:26.239" endtime="20210910 12:55:27.363"/>
 </suite>
 <statistics>
 <total>
@@ -73,20 +61,5 @@ Robot Framework documentation.</doc>
 </suite>
 </statistics>
 <errors>
-<<<<<<< HEAD
-<msg timestamp="20210910 08:34:41.400" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/tests.robot' on line 6: Setting variable '${Base_URL}= https://petstore.swagger.io/v2' failed: Invalid variable name '${Base_URL}= https://petstore.swagger.io/v2'.</msg>
-<msg timestamp="20210910 08:34:41.438" level="ERROR">Error in file '/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/tests.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  /home/andrew/.local/bin
-  /usr/lib/python38.zip
-  /usr/lib/python3.8
-  /usr/lib/python3.8/lib-dynload
-  /home/andrew/.local/lib/python3.8/site-packages
-  /usr/local/lib/python3.8/dist-packages
-  /usr/lib/python3/dist-packages</msg>
-=======
->>>>>>> 413fd6401b1f4a5290eacd5480476f00210c0850
 </errors>
 </robot>
