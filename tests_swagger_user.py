@@ -8,6 +8,7 @@ from json import dumps
 def test_user_post_createWithList(user_data):
     '''Creates list of users with given input array'''
     user = requests.post(url=api_urls.User.USER, headers=HEADERS, data=dumps(user_data))
+    # print("\n\t", user.text)
     assert user.status_code == 200, 'Falling'
 
 def test_user_get_username(user_data):
