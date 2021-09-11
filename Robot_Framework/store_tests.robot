@@ -22,9 +22,9 @@ Swagger store oder Test
 
 
 Swagger store oder id Test
-    Pass execution  This test may fail due to a small number of requests to the server
+#    Pass execution  This test may fail due to a small number of requests to the server
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
 
 Swagger store oder delete Test
-    Pass execution  This test may fail due to a small number of requests to the server
+#    Pass execution  This test may fail due to a small number of requests to the server
     ${response}=    delete     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
