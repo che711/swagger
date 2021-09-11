@@ -1,186 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210911 12:02:27.579" rpa="false" schemaversion="2">
-<suite id="s1" name="Pet Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/pet_tests.robot">
-<test id="s1-t1" name="Swagger add new pet Test">
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/pet</arg>
-<arg>data= ${data_pet}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a POST request.</doc>
-<msg timestamp="20210911 12:02:27.692" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/pet' | data=' {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"}' | headers={'Content-Type': 'application/json'} ]</msg>
-<msg timestamp="20210911 12:02:27.695" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
-<msg timestamp="20210911 12:02:28.290" level="DEBUG">https://petstore.swagger.io:443 "POST /v2/pet HTTP/1.1" 200 None</msg>
-<msg timestamp="20210911 12:02:28.292" level="INFO">POST Request : url=https://petstore.swagger.io/v2/pet 
- path_url=/v2/pet 
- headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '157'} 
- body= {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"} 
- </msg>
-<msg timestamp="20210911 12:02:28.292" level="INFO">POST Response : url=https://petstore.swagger.io/v2/pet 
- status=200, reason=OK 
- headers={'Date': 'Sat, 11 Sep 2021 09:02:28 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"} 
- </msg>
-<msg timestamp="20210911 12:02:28.292" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20210911 12:02:28.293" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210911 12:02:27.691" endtime="20210911 12:02:28.293"/>
-</kw>
-<status status="PASS" starttime="20210911 12:02:27.691" endtime="20210911 12:02:28.293"/>
-</test>
-<test id="s1-t2" name="Swagger update pet Test">
-<kw name="PUT" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/pet</arg>
-<arg>data= ${data_pet}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a PUT request.</doc>
-<msg timestamp="20210911 12:02:28.297" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/pet' | data=' {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"}' | headers={'Content-Type': 'application/json'} ]</msg>
-<msg timestamp="20210911 12:02:28.301" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
-<msg timestamp="20210911 12:02:28.879" level="DEBUG">https://petstore.swagger.io:443 "PUT /v2/pet HTTP/1.1" 200 None</msg>
-<msg timestamp="20210911 12:02:28.883" level="INFO">PUT Request : url=https://petstore.swagger.io/v2/pet 
- path_url=/v2/pet 
- headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '157'} 
- body= {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"} 
- </msg>
-<msg timestamp="20210911 12:02:28.883" level="INFO">PUT Response : url=https://petstore.swagger.io/v2/pet 
- status=200, reason=OK 
- headers={'Date': 'Sat, 11 Sep 2021 09:02:28 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"} 
- </msg>
-<msg timestamp="20210911 12:02:28.883" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20210911 12:02:28.883" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210911 12:02:28.296" endtime="20210911 12:02:28.883"/>
-</kw>
-<status status="PASS" starttime="20210911 12:02:28.294" endtime="20210911 12:02:28.884"/>
-</test>
-<test id="s1-t3" name="Swagger find pet Test">
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210911 12:15:01.881" rpa="false" schemaversion="2">
+<suite id="s1" name="Store Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/store_tests.robot">
+<test id="s1-t1" name="Swagger store inventory Test">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
-<arg>https://petstore.swagger.io/v2/pet/findByStatus</arg>
+<arg>https://petstore.swagger.io/v2/store/inventory</arg>
+<arg>data= ${data}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20210911 12:02:28.885" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/pet/findByStatus' ]</msg>
-<msg timestamp="20210911 12:02:28.887" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
-<msg timestamp="20210911 12:02:29.897" level="DEBUG">https://petstore.swagger.io:443 "GET /v2/pet/findByStatus HTTP/1.1" 200 None</msg>
-<msg timestamp="20210911 12:02:29.899" level="INFO">GET Request : url=https://petstore.swagger.io/v2/pet/findByStatus 
- path_url=/v2/pet/findByStatus 
- headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
+<msg timestamp="20210911 12:15:02.035" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/store/inventory' | data=' {"sold": randint(1, 10), "string": randint(1, 100), "pending": randint(1, 100), "available": randint(1, 1000)}' ]</msg>
+<msg timestamp="20210911 12:15:02.039" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
+<msg timestamp="20210911 12:15:02.777" level="DEBUG">https://petstore.swagger.io:443 "GET /v2/store/inventory HTTP/1.1" 200 None</msg>
+<msg timestamp="20210911 12:15:02.779" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/inventory 
+ path_url=/v2/store/inventory 
+ headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '111'} 
+ body= {"sold": randint(1, 10), "string": randint(1, 100), "pending": randint(1, 100), "available": randint(1, 1000)} 
  </msg>
-<msg timestamp="20210911 12:02:29.899" level="INFO">GET Response : url=https://petstore.swagger.io/v2/pet/findByStatus 
+<msg timestamp="20210911 12:15:02.780" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/inventory 
  status=200, reason=OK 
- headers={'Date': 'Sat, 11 Sep 2021 09:02:29 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body=[] 
+ headers={'Date': 'Sat, 11 Sep 2021 09:15:02 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"sold":17,"string":165,"pendind":1,"pending":17,"available":702,"avalible":1,"available;pending;sold":2,"Not Available":1,"{{pet2Status}}":1,"pending and 1=(case 1 when 0 then (select count(*) from syscat.datatypes d1, syscat.datatypes d2, syscat.datatypes d3, syscat.datatypes d4, syscat.datatypes d5, syscat.datatypes d6, syscat.datatypes d7) else 2 end)":1,"ipsum incididun":1,"good":1,"cupidatat lab":1,"do not delete":1,"AVAILABLE_askdjdw":1,"{{petstatusUpdate}}":1,"not available":1,"TESTE FODA-SE":1,"avaiable":1,"ok":4,"free":1,"OK":1} 
  </msg>
-<msg timestamp="20210911 12:02:29.900" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20210911 12:02:29.900" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210911 12:02:28.885" endtime="20210911 12:02:29.900"/>
+<msg timestamp="20210911 12:15:02.780" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20210911 12:15:02.781" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210911 12:15:02.035" endtime="20210911 12:15:02.781"/>
 </kw>
-<status status="PASS" starttime="20210911 12:02:28.884" endtime="20210911 12:02:29.901"/>
+<status status="PASS" starttime="20210911 12:15:02.034" endtime="20210911 12:15:02.781"/>
 </test>
-<test id="s1-t4" name="Swagger find pet by id Test">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210911 12:02:29.909" level="TRACE">Arguments: [ 'Content-Type=application/json; charset=utf-8' ]</msg>
-<msg timestamp="20210911 12:02:29.909" level="TRACE">Return: {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<msg timestamp="20210911 12:02:29.909" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<status status="PASS" starttime="20210911 12:02:29.908" endtime="20210911 12:02:29.909"/>
-</kw>
-<kw name="GET" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/pet/1</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20210911 12:02:29.910" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/pet/1' ]</msg>
-<msg timestamp="20210911 12:02:29.912" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
-<msg timestamp="20210911 12:02:30.550" level="DEBUG">https://petstore.swagger.io:443 "GET /v2/pet/1 HTTP/1.1" 200 None</msg>
-<msg timestamp="20210911 12:02:30.551" level="INFO">GET Request : url=https://petstore.swagger.io/v2/pet/1 
- path_url=/v2/pet/1 
- headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20210911 12:02:30.552" level="INFO">GET Response : url=https://petstore.swagger.io/v2/pet/1 
- status=200, reason=OK 
- headers={'Date': 'Sat, 11 Sep 2021 09:02:30 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"} 
- </msg>
-<msg timestamp="20210911 12:02:30.552" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20210911 12:02:30.552" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210911 12:02:29.910" endtime="20210911 12:02:30.552"/>
-</kw>
-<status status="PASS" starttime="20210911 12:02:29.907" endtime="20210911 12:02:30.553"/>
-</test>
-<test id="s1-t5" name="Swagger update pet by form Test">
+<test id="s1-t2" name="Swagger store oder Test">
 <kw name="POST" library="RequestsLibrary">
 <var>${response}</var>
-<arg>https://petstore.swagger.io/v2/pet/1</arg>
+<arg>https://petstore.swagger.io/v2/store/order</arg>
+<arg>data= ${data_oder}</arg>
+<arg>headers=${headers}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20210911 12:02:30.555" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/pet/1' ]</msg>
-<msg timestamp="20210911 12:02:30.557" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
-<msg timestamp="20210911 12:02:31.112" level="DEBUG">https://petstore.swagger.io:443 "POST /v2/pet/1 HTTP/1.1" 200 None</msg>
-<msg timestamp="20210911 12:02:31.119" level="INFO">POST Request : url=https://petstore.swagger.io/v2/pet/1 
- path_url=/v2/pet/1 
- headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
- body=None 
+<msg timestamp="20210911 12:15:02.784" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/store/order' | data=' {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true}' | headers={'Content-Type': 'application/json'} ]</msg>
+<msg timestamp="20210911 12:15:02.787" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
+<msg timestamp="20210911 12:15:03.419" level="DEBUG">https://petstore.swagger.io:443 "POST /v2/store/order HTTP/1.1" 200 None</msg>
+<msg timestamp="20210911 12:15:03.421" level="INFO">POST Request : url=https://petstore.swagger.io/v2/store/order 
+ path_url=/v2/store/order 
+ headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '115'} 
+ body= {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true} 
  </msg>
-<msg timestamp="20210911 12:02:31.120" level="INFO">POST Response : url=https://petstore.swagger.io/v2/pet/1 
+<msg timestamp="20210911 12:15:03.421" level="INFO">POST Response : url=https://petstore.swagger.io/v2/store/order 
  status=200, reason=OK 
- headers={'Date': 'Sat, 11 Sep 2021 09:02:31 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":200,"type":"unknown","message":"1"} 
+ headers={'Date': 'Sat, 11 Sep 2021 09:15:03 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":9223372036854775807,"petId":0,"quantity":0,"shipDate":"2021-09-10T12:12:18.589+0000","status":"placed","complete":true} 
  </msg>
-<msg timestamp="20210911 12:02:31.120" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20210911 12:02:31.120" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210911 12:02:30.554" endtime="20210911 12:02:31.120"/>
+<msg timestamp="20210911 12:15:03.421" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20210911 12:15:03.422" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210911 12:15:02.783" endtime="20210911 12:15:03.422"/>
 </kw>
-<status status="PASS" starttime="20210911 12:02:30.554" endtime="20210911 12:02:31.121"/>
+<status status="PASS" starttime="20210911 12:15:02.782" endtime="20210911 12:15:03.422"/>
 </test>
-<test id="s1-t6" name="Swagger delete pet Test">
+<test id="s1-t3" name="Swagger store oder id Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>This test may fail due to a small number of requests to the server</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20210911 12:15:03.424" level="TRACE">Arguments: [ 'This test may fail due to a small number of requests to the server' ]</msg>
+<msg timestamp="20210911 12:15:03.424" level="INFO">Execution passed with message:
+This test may fail due to a small number of requests to the server</msg>
+<status status="PASS" starttime="20210911 12:15:03.423" endtime="20210911 12:15:03.424"/>
+</kw>
+<status status="PASS" starttime="20210911 12:15:03.423" endtime="20210911 12:15:03.425">This test may fail due to a small number of requests to the server</status>
+</test>
+<test id="s1-t4" name="Swagger store oder delete Test">
 <kw name="Skip" library="BuiltIn">
 <doc>Skips the rest of the current test.</doc>
-<msg timestamp="20210911 12:02:31.123" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20210911 12:02:31.123" level="SKIP">Skipped with Skip keyword.</msg>
-<msg timestamp="20210911 12:02:31.124" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20210911 12:15:03.426" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210911 12:15:03.426" level="SKIP">Skipped with Skip keyword.</msg>
+<msg timestamp="20210911 12:15:03.426" level="DEBUG">Traceback (most recent call last):
   None</msg>
-<status status="SKIP" starttime="20210911 12:02:31.123" endtime="20210911 12:02:31.124"/>
+<status status="SKIP" starttime="20210911 12:15:03.426" endtime="20210911 12:15:03.426"/>
 </kw>
 <kw name="DELETE" library="RequestsLibrary">
 <var>${response}</var>
-<arg>https://petstore.swagger.io/v2/pet/5</arg>
+<arg>https://petstore.swagger.io/v2/store/order/2</arg>
+<arg>data= ${data_oder}</arg>
 <doc>Sends a DELETE request.</doc>
-<status status="NOT RUN" starttime="20210911 12:02:31.124" endtime="20210911 12:02:31.124"/>
+<status status="NOT RUN" starttime="20210911 12:15:03.426" endtime="20210911 12:15:03.426"/>
 </kw>
-<status status="SKIP" starttime="20210911 12:02:31.121" endtime="20210911 12:02:31.125">Skipped with Skip keyword.</status>
-</test>
-<test id="s1-t7" name="Swagger update image Test">
-<kw name="Fail" library="BuiltIn">
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<msg timestamp="20210911 12:02:31.127" level="TRACE">Arguments: [  ]</msg>
-<msg timestamp="20210911 12:02:31.129" level="FAIL">AssertionError</msg>
-<msg timestamp="20210911 12:02:31.129" level="DEBUG">Traceback (most recent call last):
-  None</msg>
-<status status="FAIL" starttime="20210911 12:02:31.127" endtime="20210911 12:02:31.129"/>
-</kw>
-<kw name="POST" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://petstore.swagger.io/v2/pet/2/uploadImage</arg>
-<doc>Sends a POST request.</doc>
-<status status="NOT RUN" starttime="20210911 12:02:31.130" endtime="20210911 12:02:31.130"/>
-</kw>
-<status status="FAIL" starttime="20210911 12:02:31.126" endtime="20210911 12:02:31.131">AssertionError</status>
+<status status="SKIP" starttime="20210911 12:15:03.425" endtime="20210911 12:15:03.427">Skipped with Skip keyword.</status>
 </test>
 <doc>Example using the space separated format.
 Checking the information provided in the
 Robot Framework documentation.</doc>
-<status status="FAIL" starttime="20210911 12:02:27.581" endtime="20210911 12:02:31.132"/>
+<status status="PASS" starttime="20210911 12:15:01.883" endtime="20210911 12:15:03.428"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="1" skip="1">All Tests</stat>
+<stat pass="3" fail="0" skip="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="1" skip="1" id="s1" name="Pet Tests">Pet Tests</stat>
+<stat pass="3" fail="0" skip="1" id="s1" name="Store Tests">Store Tests</stat>
 </suite>
 </statistics>
 <errors>

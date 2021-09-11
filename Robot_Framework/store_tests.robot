@@ -4,6 +4,8 @@ Documentation     Example using the space separated format.
 ...               Robot Framework documentation.
 Library           RequestsLibrary
 Library           Collections
+Library           BuiltIn
+
 
 #  robot  --loglevel TRACE store_tests.robot
 
@@ -26,5 +28,5 @@ Swagger store oder id Test
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
 
 Swagger store oder delete Test
-    Pass execution  This test may fail due to a small number of requests to the server
+    BuiltIn.Skip
     ${response}=    delete     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
