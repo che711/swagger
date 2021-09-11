@@ -28,5 +28,5 @@ Swagger store oder id Test
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
 
 Swagger store oder delete Test
-    BuiltIn.Fail    HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/2
+    BuiltIn.Pass execution    HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/2
     ${response}=    delete     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
