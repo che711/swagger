@@ -28,5 +28,5 @@ Swagger store oder id Test
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
 
 Swagger store oder delete Test
-    BuiltIn.Pass execution     Known Bugs 400,404,415,405
+#    BuiltIn.Pass execution     Known Bugs 400,404,415,405
     ${response}=    delete     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
