@@ -22,7 +22,8 @@ Swagger find pet Test
     ${response}=    GET      https://petstore.swagger.io/v2/pet/findByStatus
 
 Swagger find pet by id Test
-    Pass execution     This test may fail due to a small number of requests to the server
+#    Pass execution     This test may fail due to a small number of requests to the server
+    BuiltIn.Skip
     ${headers}         Create Dictionary  Content-Type=application/json; charset=utf-8
     ${response}=       GET      https://petstore.swagger.io/v2/pet/1
 
