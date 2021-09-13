@@ -15,15 +15,15 @@ ${data_oder}      {"id": 0, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T1
 
 *** Test Cases ***
 Swagger store inventory Test
-    ${response}=    GET      https://petstore.swagger.io/v2/store/inventory  data= ${data}       headers=${headers}
+    ${response}=    GET      https://petstore.swagger.io/v2/store/inventory  data= ${data}
 
 Swagger ustore oder Test
-    ${response}=    POST     https://petstore.swagger.io/v2/store/order     data= ${data_oder}   headers=${headers}
+    ${response}=    POST     https://petstore.swagger.io/v2/store/order     data= ${data_oder}
 
 Swagger ustore oder id Test
     BuiltIn.Skip   (HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/2)
-    ${response}=    GET     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}   headers=${headers}
+    ${response}=    GET     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}
 
 Swagger ustore oder delete Test
     BuiltIn.Pass execution  ('HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/2')
-    ${response}=    delete     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}   headers=${headers}
+    ${response}=    delete     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}

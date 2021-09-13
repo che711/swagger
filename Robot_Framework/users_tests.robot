@@ -18,22 +18,22 @@ Swagger user get username Test
     ${response}=    GET      https://petstore.swagger.io/v2/user/string
 
 Swagger user post createWithList Test
-    ${response}=    POST     https://petstore.swagger.io/v2/user/createWithList  data= ${data_list}   headers=${headers}
+    ${response}=    POST     https://petstore.swagger.io/v2/user/createWithList     data= ${data_list}
 
 Swagger user put username Test
-    ${response}=    PUT      https://petstore.swagger.io/v2/user/string           data=${data}     headers=${headers}
+    ${response}=    PUT      https://petstore.swagger.io/v2/user/string              data=${data}
 
 Swagger user del username Test
-    ${response}=    DELETE   https://petstore.swagger.io/v2/user/string     headers=${headers}
+    ${response}=    DELETE   https://petstore.swagger.io/v2/user/string
 
 Swagger user login Test
-    ${response}=    GET     https://petstore.swagger.io/v2/user/login       headers=${headers}    data=${data_to_login}
+    ${response}=    GET     https://petstore.swagger.io/v2/user/login                data=${data_to_login}
 
 Swagger user logout Test
-    ${response}=    GET     https://petstore.swagger.io/v2/user/logout       headers=${headers}    data=${data_to_login}
+    ${response}=    GET     https://petstore.swagger.io/v2/user/logout               data=${data_to_login}
 
 Swagger list user Test
-    ${response}=    POST     https://petstore.swagger.io/v2/user/createWithArray    headers=${headers}    data=${data_list}
+    ${response}=    POST     https://petstore.swagger.io/v2/user/createWithArray      data=${data_list}
 
 Swagger create user Test
-    ${response}=    POST     https://petstore.swagger.io/v2/user    headers=${headers}    data=${data}
+    ${response}=    POST     https://petstore.swagger.io/v2/user                      data=${data}
