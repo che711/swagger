@@ -32,11 +32,11 @@ Swagger update pet by form Test
     ${response}=       POST      https://petstore.swagger.io/v2/pet/1
 
 Swagger delete pet Test
-    Skip If    ('HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/5')
+    Skip                ('HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/5')
     ${response}=       DELETE      https://petstore.swagger.io/v2/pet/5
 
 Swagger update image Test
 #    BuiltIn.Fail
 #    BuiltIn.Pass execution       This test may fail due to a small number of requests to the server
-    Skip If    ('HTTPError: 415 Client Error','There is HTTP error')
+    Skip               ('HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/3/uploadImage')
     ${response}=       POST      https://petstore.swagger.io/v2/pet/3/uploadImage
