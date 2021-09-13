@@ -23,12 +23,11 @@ Swagger find pet Test
     ${response}=    GET      https://petstore.swagger.io/v2/pet/findByStatus
 
 Swagger find pet by id Test
-    BuiltIn.Pass execution     This test may fail due to a small number of requests to the server
-    ${headers}         Create Dictionary  Content-Type=application/json; charset=utf-8
+#    BuiltIn.Pass execution    HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
     ${response}=       GET      https://petstore.swagger.io/v2/pet/1
 
 Swagger update pet by form Test
-    BuiltIn.Pass execution     This test may fail due to a small number of requests to the server
+    Pass execution     HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
     ${response}=       POST      https://petstore.swagger.io/v2/pet/1
 
 Swagger delete pet Test
