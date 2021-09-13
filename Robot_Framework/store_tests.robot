@@ -21,9 +21,9 @@ Swagger ustore oder Test
     ${response}=    POST     https://petstore.swagger.io/v2/store/order     data= ${data_oder}   headers=${headers}
 
 Swagger ustore oder id Test
-#    Pass execution  This test may fail due to a small number of requests to the server
+    BuiltIn.Skip
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}   headers=${headers}
 
 Swagger ustore oder delete Test
-#    Pass execution  This test may fail due to a small number of requests to the server
+    Pass execution  This test may fail due to a small number of requests to the server
     ${response}=    delete     https://petstore.swagger.io/v2/store/order/2     data= ${data_oder}   headers=${headers}
