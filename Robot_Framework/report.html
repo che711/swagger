@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 4.1.1 (Python 3.8.10 on linux)" name="Generator">
+<meta content="Robot Framework 4.1 (Python 3.8.10 on linux)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
@@ -1186,10 +1186,7 @@ window.testdata = function () {
     function createBodyItem(parent, element, strings, index) {
         if (element[0] == MESSAGE_TYPE)
             return createMessage(element, strings);
-        var messages = util.filter(parent.children(), function (child) {
-            return child.type == 'message';
-        })
-        return createKeyword(parent, element, strings, index - messages.length);
+        return createKeyword(parent, element, strings, index);
     }
     function createKeyword(parent, element, strings, index) {
         var kw = model.Keyword({
@@ -1628,33 +1625,22 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-<<<<<<< HEAD
-window.output["suite"] = [1,2,3,4,[],[1,0,2039],[],[[5,0,0,[],[1,111,697],[]],[6,0,0,[],[1,809,636],[]],[7,0,0,[],[1,1446,577],[]],[8,0,0,[],[1,2024,6,9],[]],[10,0,0,[],[1,2030,2,9],[]],[11,0,0,[],[2,2033,2,12],[]],[13,0,0,[],[1,2036,1,9],[]]],[],[7,6,0,1]];
-=======
-window.output["suite"] = [1,2,3,4,[],[0,0,6365],[],[[5,0,0,[],[1,70,1061],[]],[6,0,0,[],[1,1131,3080],[]],[7,0,0,[],[0,4211,1084,8],[]],[9,0,0,[],[1,5296,1068],[]]],[],[4,3,1,0]];
->>>>>>> 8f20faae8a822bb1d01e73a76b8c781365f555ec
+window.output["suite"] = [1,2,3,4,[],[1,0,2426],[],[[5,0,0,[],[1,108,580],[]],[6,0,0,[],[1,689,569],[]],[7,0,0,[],[1,1258,570],[]],[8,0,0,[],[1,1829,583],[]],[9,0,0,[],[1,2413,4,10],[]],[11,0,0,[],[2,2418,3,12],[]],[13,0,0,[],[2,2422,3,14],[]]],[],[7,5,0,2]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Store Tests","*/home/chernomorov/Desktop/projects/swagger/Robot_Framework/store_tests.robot","*store_tests.robot","*<p>Example using the space separated format. Checking the information provided in the Robot Framework documentation.\x3c/p>","*Swagger store inventory Test","*Swagger store oder Test","*Swagger ustore oder id Test","*HTTPError: 404 Client Error: Not Found for url: <a href=\"https://petstore.swagger.io/v2/store/order/5\">https://petstore.swagger.io/v2/store/order/5\x3c/a>","*Swagger ustore oder delete Test"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Pet Tests","*/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/pet_tests.robot","*pet_tests.robot","*<p>Example using the space separated format. Checking the information provided in the Robot Framework documentation.\x3c/p>","*Swagger add new pet Test","*Swagger update pet Test","*Swagger find pet Test","*Swagger find pet by id Test","*Swagger update pet by form Test","*'HTTPError: 404 Client Error: Not Found for url: <a href=\"https://petstore.swagger.io/v2/pet/1\">https://petstore.swagger.io/v2/pet/1\x3c/a>'","*Swagger delete pet Test","*('HTTPError: 404 Client Error: Not Found for url: <a href=\"https://petstore.swagger.io/v2/pet/5\">https://petstore.swagger.io/v2/pet/5\x3c/a>')","*Swagger update image Test","*'HTTPError: 415 Client Error: Unsupported Media Type for url: <a href=\"https://petstore.swagger.io/v2/pet/3/uploadImage\">https://petstore.swagger.io/v2/pet/3/uploadImage\x3c/a>'"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:06","fail":1,"label":"All Tests","pass":3,"skip":0}],[],[{"elapsed":"00:00:06","fail":1,"id":"s1","label":"Store Tests","name":"Store Tests","pass":3,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:02","fail":0,"label":"All Tests","pass":5,"skip":2}],[],[{"elapsed":"00:00:02","fail":0,"id":"s1","label":"Pet Tests","name":"Pet Tests","pass":5,"skip":2}]];
 </script>
 <script type="text/javascript">
-<<<<<<< HEAD
-window.output["baseMillis"] = 1631459256627;
+window.output["baseMillis"] = 1631595492728;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 2050;
-=======
-window.output["baseMillis"] = 1631546878754;
-</script>
-<script type="text/javascript">
-window.output["generated"] = 6372;
->>>>>>> 8f20faae8a822bb1d01e73a76b8c781365f555ec
+window.output["generated"] = 2439;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;

@@ -27,7 +27,7 @@ Swagger find pet by id Test
     ${response}=       GET      https://petstore.swagger.io/v2/pet/1
 
 Swagger update pet by form Test
-    BuiltIn.Pass execution     HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
+    BuiltIn.Pass execution     'HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1'
     ${response}=       POST      https://petstore.swagger.io/v2/pet/1
 
 Swagger delete pet Test
@@ -36,16 +36,7 @@ Swagger delete pet Test
 
 Swagger update image Test
 #    BuiltIn.Fail
-<<<<<<< HEAD
-    BuiltIn.Pass execution       This test may fail due to a small number of requests to the server
+    BuiltIn.Skip               'HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/3/uploadImage'
+#    BuiltIn.Pass execution       'HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/3/uploadImage'
     ${response}=       POST      https://petstore.swagger.io/v2/pet/2/uploadImage
 
-
-
-docker run -p 9001:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
-docker run -d -v jenkins_home:/var/jenkins_home -p 9001:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11
-=======
-#    BuiltIn.Pass execution       This test may fail due to a small number of requests to the server
-    BuiltIn.Skip               ('HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/3/uploadImage')
-    ${response}=       POST      https://petstore.swagger.io/v2/pet/3/uploadImage
->>>>>>> 8f20faae8a822bb1d01e73a76b8c781365f555ec

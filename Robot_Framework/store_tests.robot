@@ -10,13 +10,14 @@ Library           Collections
 
 *** Variables ***
 &{headers}        Content-Type=application/json
+${data_order}     evaluate  {"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}
 
-*** Keywords ***
-Setup Store Tests
-    ${order_id} =  evaluate  random.randint(1,10)  random
-    ot   ${order_id}  ${order_id}
-    ${data_order} =  evaluate  {"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}
-    set suite variable  ${data_order}  ${data_order}
+#*** Keywords ***
+#Setup Store Tests
+#    ${order_id} =  evaluate  random.randint(1,10)  random
+#    ot   ${order_id}  ${order_id}
+#    ${data_order} =  evaluate  {"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}
+#    set suite variable  ${data_order}  ${data_order}
 
 
 *** Test Cases ***
