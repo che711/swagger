@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210914 08:10:06.045" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.8.10 on linux)" generated="20210914 08:15:33.157" rpa="false" schemaversion="2">
 <suite id="s1" name="Store Tests" source="/home/andrew/Рабочий стол/Andrei_Che/swagger/Robot_Framework/store_tests.robot">
 <kw name="Setup Store Tests" type="SETUP">
-<msg timestamp="20210914 08:10:06.153" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210914 08:15:33.297" level="TRACE">Arguments: [  ]</msg>
 <kw name="Evaluate" library="BuiltIn">
 <var>${order_id}</var>
 <arg>random.randint(1,10)</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210914 08:10:06.154" level="TRACE">Arguments: [ 'random.randint(1,10)' | 'random' ]</msg>
-<msg timestamp="20210914 08:10:06.154" level="TRACE">Return: 6</msg>
-<msg timestamp="20210914 08:10:06.154" level="INFO">${order_id} = 6</msg>
-<status status="PASS" starttime="20210914 08:10:06.153" endtime="20210914 08:10:06.155"/>
+<msg timestamp="20210914 08:15:33.297" level="TRACE">Arguments: [ 'random.randint(1,10)' | 'random' ]</msg>
+<msg timestamp="20210914 08:15:33.297" level="TRACE">Return: 4</msg>
+<msg timestamp="20210914 08:15:33.298" level="INFO">${order_id} = 4</msg>
+<status status="PASS" starttime="20210914 08:15:33.297" endtime="20210914 08:15:33.298"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${order_id}</arg>
 <arg>${order_id}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20210914 08:10:06.155" level="TRACE">Arguments: [ '${order_id}' | '${order_id}' ]</msg>
-<msg timestamp="20210914 08:10:06.156" level="INFO">${order_id} = 6</msg>
-<msg timestamp="20210914 08:10:06.156" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20210914 08:10:06.155" endtime="20210914 08:10:06.156"/>
+<msg timestamp="20210914 08:15:33.298" level="TRACE">Arguments: [ '${order_id}' | '${order_id}' ]</msg>
+<msg timestamp="20210914 08:15:33.298" level="INFO">${order_id} = 4</msg>
+<msg timestamp="20210914 08:15:33.298" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 08:15:33.298" endtime="20210914 08:15:33.298"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${data_order}</var>
 <arg>{"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210914 08:10:06.157" level="TRACE">Arguments: [ '{"id": 6, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}' ]</msg>
-<msg timestamp="20210914 08:10:06.158" level="TRACE">Return: {'complete': True,
- 'id': 6,
+<msg timestamp="20210914 08:15:33.299" level="TRACE">Arguments: [ '{"id": 4, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}' ]</msg>
+<msg timestamp="20210914 08:15:33.299" level="TRACE">Return: {'complete': True,
+ 'id': 4,
  'petId': 0,
  'quantity': 0,
  'shipDate': '2021-09-10T12:12:18.589Z',
  'status': 'placed'}</msg>
-<msg timestamp="20210914 08:10:06.158" level="INFO">${data_order} = {'id': 6, 'petId': 0, 'quantity': 0, 'shipDate': '2021-09-10T12:12:18.589Z', 'status': 'placed', 'complete': True}</msg>
-<status status="PASS" starttime="20210914 08:10:06.157" endtime="20210914 08:10:06.158"/>
+<msg timestamp="20210914 08:15:33.299" level="INFO">${data_order} = {'id': 4, 'petId': 0, 'quantity': 0, 'shipDate': '2021-09-10T12:12:18.589Z', 'status': 'placed', 'complete': True}</msg>
+<status status="PASS" starttime="20210914 08:15:33.299" endtime="20210914 08:15:33.299"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${data_order}</arg>
 <arg>${data_order}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20210914 08:10:06.159" level="TRACE">Arguments: [ '${data_order}' | '${data_order}' ]</msg>
-<msg timestamp="20210914 08:10:06.159" level="INFO">${data_order} = {'id': 6, 'petId': 0, 'quantity': 0, 'shipDate': '2021-09-10T12:12:18.589Z', 'status': 'placed', 'complete': True}</msg>
-<msg timestamp="20210914 08:10:06.159" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20210914 08:10:06.158" endtime="20210914 08:10:06.159"/>
+<msg timestamp="20210914 08:15:33.300" level="TRACE">Arguments: [ '${data_order}' | '${data_order}' ]</msg>
+<msg timestamp="20210914 08:15:33.300" level="INFO">${data_order} = {'id': 4, 'petId': 0, 'quantity': 0, 'shipDate': '2021-09-10T12:12:18.589Z', 'status': 'placed', 'complete': True}</msg>
+<msg timestamp="20210914 08:15:33.301" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 08:15:33.300" endtime="20210914 08:15:33.301"/>
 </kw>
-<msg timestamp="20210914 08:10:06.160" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20210914 08:10:06.153" endtime="20210914 08:10:06.160"/>
+<msg timestamp="20210914 08:15:33.301" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 08:15:33.297" endtime="20210914 08:15:33.301"/>
 </kw>
 <test id="s1-t1" name="Swagger store inventory Test">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>https://petstore.swagger.io/v2/store/inventory</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20210914 08:10:06.162" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/store/inventory' ]</msg>
-<msg timestamp="20210914 08:10:06.167" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
-<msg timestamp="20210914 08:10:06.864" level="DEBUG">https://petstore.swagger.io:443 "GET /v2/store/inventory HTTP/1.1" 200 None</msg>
-<msg timestamp="20210914 08:10:06.868" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/inventory 
+<msg timestamp="20210914 08:15:33.302" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/store/inventory' ]</msg>
+<msg timestamp="20210914 08:15:33.305" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
+<msg timestamp="20210914 08:15:33.939" level="DEBUG">https://petstore.swagger.io:443 "GET /v2/store/inventory HTTP/1.1" 200 None</msg>
+<msg timestamp="20210914 08:15:33.943" level="INFO">GET Request : url=https://petstore.swagger.io/v2/store/inventory 
  path_url=/v2/store/inventory 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20210914 08:10:06.868" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/inventory 
+<msg timestamp="20210914 08:15:33.943" level="INFO">GET Response : url=https://petstore.swagger.io/v2/store/inventory 
  status=200, reason=OK 
- headers={'Date': 'Tue, 14 Sep 2021 05:10:06 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"sold":8,"string":257,"pending":3,"available":723,"StatusJvR":2,"status":1} 
+ headers={'Date': 'Tue, 14 Sep 2021 05:15:33 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"sold":8,"string":258,"pending":3,"available":722,"StatusJvR":2,"status":1} 
  </msg>
-<msg timestamp="20210914 08:10:06.869" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20210914 08:10:06.869" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210914 08:10:06.161" endtime="20210914 08:10:06.870"/>
+<msg timestamp="20210914 08:15:33.944" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20210914 08:15:33.945" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210914 08:15:33.302" endtime="20210914 08:15:33.945"/>
 </kw>
-<status status="PASS" starttime="20210914 08:10:06.160" endtime="20210914 08:10:06.870"/>
+<status status="PASS" starttime="20210914 08:15:33.301" endtime="20210914 08:15:33.946"/>
 </test>
 <test id="s1-t2" name="Swagger store oder Test">
 <kw name="POST" library="RequestsLibrary">
@@ -79,80 +79,80 @@
 <arg>json=${data_order}</arg>
 <arg>headers=&amp;{headers}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20210914 08:10:06.873" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/store/order' | json={'complete': True,
- 'id': 6,
+<msg timestamp="20210914 08:15:33.950" level="TRACE">Arguments: [ 'https://petstore.swagger.io/v2/store/order' | json={'complete': True,
+ 'id': 4,
  'petId': 0,
  'quantity': 0,
  'shipDate': '2021-09-10T12:12:18.589Z',
  'status': 'placed'} | headers={'Content-Type': 'application/json'} ]</msg>
-<msg timestamp="20210914 08:10:06.875" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
-<msg timestamp="20210914 08:10:07.440" level="DEBUG">https://petstore.swagger.io:443 "POST /v2/store/order HTTP/1.1" 200 None</msg>
-<msg timestamp="20210914 08:10:07.443" level="INFO">POST Request : url=https://petstore.swagger.io/v2/store/order 
+<msg timestamp="20210914 08:15:33.952" level="DEBUG">Starting new HTTPS connection (1): petstore.swagger.io:443</msg>
+<msg timestamp="20210914 08:15:34.526" level="DEBUG">https://petstore.swagger.io:443 "POST /v2/store/order HTTP/1.1" 200 None</msg>
+<msg timestamp="20210914 08:15:34.529" level="INFO">POST Request : url=https://petstore.swagger.io/v2/store/order 
  path_url=/v2/store/order 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '114'} 
- body=b'{"id": 6, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true}' 
+ body=b'{"id": 4, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": true}' 
  </msg>
-<msg timestamp="20210914 08:10:07.444" level="INFO">POST Response : url=https://petstore.swagger.io/v2/store/order 
+<msg timestamp="20210914 08:15:34.529" level="INFO">POST Response : url=https://petstore.swagger.io/v2/store/order 
  status=200, reason=OK 
- headers={'Date': 'Tue, 14 Sep 2021 05:10:07 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":6,"petId":0,"quantity":0,"shipDate":"2021-09-10T12:12:18.589+0000","status":"placed","complete":true} 
+ headers={'Date': 'Tue, 14 Sep 2021 05:15:34 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":4,"petId":0,"quantity":0,"shipDate":"2021-09-10T12:12:18.589+0000","status":"placed","complete":true} 
  </msg>
-<msg timestamp="20210914 08:10:07.444" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20210914 08:10:07.445" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210914 08:10:06.873" endtime="20210914 08:10:07.445"/>
+<msg timestamp="20210914 08:15:34.530" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20210914 08:15:34.530" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210914 08:15:33.949" endtime="20210914 08:15:34.530"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2 sec</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210914 08:10:07.445" level="TRACE">Arguments: [ '2 sec' ]</msg>
-<msg timestamp="20210914 08:10:09.446" level="INFO">Slept 2 seconds</msg>
-<msg timestamp="20210914 08:10:09.446" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20210914 08:10:07.445" endtime="20210914 08:10:09.447"/>
+<msg timestamp="20210914 08:15:34.531" level="TRACE">Arguments: [ '2 sec' ]</msg>
+<msg timestamp="20210914 08:15:36.531" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20210914 08:15:36.532" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 08:15:34.530" endtime="20210914 08:15:36.532"/>
 </kw>
-<status status="PASS" starttime="20210914 08:10:06.871" endtime="20210914 08:10:09.448"/>
+<status status="PASS" starttime="20210914 08:15:33.947" endtime="20210914 08:15:36.533"/>
 </test>
 <test id="s1-t3" name="Swagger store oder id Test">
 <kw name="Skip" library="BuiltIn">
-<arg>"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</arg>
+<arg>"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"</arg>
 <doc>Skips the rest of the current test.</doc>
-<msg timestamp="20210914 08:10:09.452" level="TRACE">Arguments: [ '"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"' ]</msg>
-<msg timestamp="20210914 08:10:09.453" level="SKIP">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</msg>
-<msg timestamp="20210914 08:10:09.454" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20210914 08:15:36.537" level="TRACE">Arguments: [ '"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"' ]</msg>
+<msg timestamp="20210914 08:15:36.537" level="SKIP">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</msg>
+<msg timestamp="20210914 08:15:36.537" level="DEBUG">Traceback (most recent call last):
   None</msg>
-<status status="SKIP" starttime="20210914 08:10:09.451" endtime="20210914 08:10:09.454"/>
+<status status="SKIP" starttime="20210914 08:15:36.536" endtime="20210914 08:15:36.537"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>https://petstore.swagger.io/v2/store/order/${order_id}</arg>
 <arg>json=${data_order}</arg>
 <doc>Sends a GET request.</doc>
-<status status="NOT RUN" starttime="20210914 08:10:09.455" endtime="20210914 08:10:09.455"/>
+<status status="NOT RUN" starttime="20210914 08:15:36.538" endtime="20210914 08:15:36.538"/>
 </kw>
-<status status="SKIP" starttime="20210914 08:10:09.449" endtime="20210914 08:10:09.457">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</status>
+<status status="SKIP" starttime="20210914 08:15:36.535" endtime="20210914 08:15:36.538">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</status>
 </test>
 <test id="s1-t4" name="Swagger store oder delete Test">
 <kw name="Skip" library="BuiltIn">
-<arg>"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</arg>
+<arg>"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"</arg>
 <doc>Skips the rest of the current test.</doc>
-<msg timestamp="20210914 08:10:09.458" level="TRACE">Arguments: [ '"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"' ]</msg>
-<msg timestamp="20210914 08:10:09.458" level="SKIP">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</msg>
-<msg timestamp="20210914 08:10:09.458" level="DEBUG">Traceback (most recent call last):
+<msg timestamp="20210914 08:15:36.540" level="TRACE">Arguments: [ '"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"' ]</msg>
+<msg timestamp="20210914 08:15:36.541" level="SKIP">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</msg>
+<msg timestamp="20210914 08:15:36.541" level="DEBUG">Traceback (most recent call last):
   None</msg>
-<status status="SKIP" starttime="20210914 08:10:09.458" endtime="20210914 08:10:09.459"/>
+<status status="SKIP" starttime="20210914 08:15:36.540" endtime="20210914 08:15:36.541"/>
 </kw>
 <kw name="DELETE" library="RequestsLibrary">
 <var>${response}</var>
 <arg>https://petstore.swagger.io/v2/store/order/${order_id}</arg>
 <arg>json=${data_order}</arg>
 <doc>Sends a DELETE request.</doc>
-<status status="NOT RUN" starttime="20210914 08:10:09.459" endtime="20210914 08:10:09.459"/>
+<status status="NOT RUN" starttime="20210914 08:15:36.541" endtime="20210914 08:15:36.541"/>
 </kw>
-<status status="SKIP" starttime="20210914 08:10:09.457" endtime="20210914 08:10:09.459">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</status>
+<status status="SKIP" starttime="20210914 08:15:36.539" endtime="20210914 08:15:36.542">"HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"</status>
 </test>
 <doc>Example using the space separated format.
 Checking the information provided in the
 Robot Framework documentation.</doc>
-<status status="PASS" starttime="20210914 08:10:06.047" endtime="20210914 08:10:09.460"/>
+<status status="PASS" starttime="20210914 08:15:33.158" endtime="20210914 08:15:36.543"/>
 </suite>
 <statistics>
 <total>
