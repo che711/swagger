@@ -10,14 +10,13 @@ Library           Collections
 
 *** Variables ***
 &{headers}        Content-Type=application/json
-${data_order}     evaluate  {"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}
 
-#*** Keywords ***
-#Setup Store Tests
-#    ${order_id} =  evaluate  random.randint(1,10)  random
-#    ot   ${order_id}  ${order_id}
-#    ${data_order} =  evaluate  {"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}
-#    set suite variable  ${data_order}  ${data_order}
+*** Keywords ***
+Setup Store Tests
+    ${order_id} =  evaluate  random.randint(1,10)  random
+    set suite variable    ${order_id}  ${order_id}
+    ${data_order} =  evaluate  {"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}
+    set suite variable  ${data_order}  ${data_order}
 
 
 *** Test Cases ***
@@ -28,8 +27,8 @@ Swagger store oder Test
     ${response}=    POST     https://petstore.swagger.io/v2/store/order     json=${data_order}      headers=&{headers}
     sleep  2 sec
 
-Swagger ustore oder id Test
+Swagger store oder id Test
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/${order_id}     json=${data_order}
 
-Swagger ustore oder delete Test
+Swagger store oder delete Test
     ${response}=    delete     https://petstore.swagger.io/v2/store/order/${order_id}     json=${data_order}
