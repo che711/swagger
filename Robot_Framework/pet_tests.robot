@@ -2,6 +2,7 @@
 Documentation     Example using the space separated format.
 ...               Checking the information provided in the
 ...               Robot Framework documentation.
+Suite setup       Setup Pet Tests
 Library           RequestsLibrary
 Library           Collections
 Library           BuiltIn
@@ -10,34 +11,38 @@ Library           BuiltIn
 
 *** Variables ***
 &{headers}        Content-Type=application/json
-${data_pet}       {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"}
+#${data_pet}       {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"}
+
+
+*** Keywords ***
+Setup Pet Tests
+    ${order_id} =  evaluate  random.randint(1,10)  random
+    set suite variable    ${order_id}  ${order_id}
+    ${data_pet} =  evaluate  {"id": ${order_id}, "category": {"id": ${order_id}, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": ${order_id}, "name": "string" }], "status": "available"}
+    set suite variable  ${data_pet}  ${data_pet}
 
 *** Test Cases ***
 Swagger add new pet Test
-    ${response}=    POST      https://petstore.swagger.io/v2/pet     data= ${data_pet}       headers=${headers}
+    ${response}=    POST      https://petstore.swagger.io/v2/pet     json=${data_pet}       headers=&{headers}
 
 Swagger update pet Test
-    ${response}=    PUT      https://petstore.swagger.io/v2/pet     data= ${data_pet}       headers=${headers}
+    ${response}=    PUT      https://petstore.swagger.io/v2/pet     json=${data_pet}       headers=&{headers}
 
 Swagger find pet Test
     ${response}=    GET      https://petstore.swagger.io/v2/pet/findByStatus
 
 Swagger find pet by id Test
-#    BuiltIn.Pass execution    HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
-    ${response}=       GET      https://petstore.swagger.io/v2/pet/1
+    ${response}=       GET      https://petstore.swagger.io/v2/pet/${order_id}
 
 Swagger update pet by form Test
-    BuiltIn.Pass execution     HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
-    ${response}=       POST      https://petstore.swagger.io/v2/pet/1
+    ${response}=       POST      https://petstore.swagger.io/v2/pet/${order_id}
 
 Swagger delete pet Test
-    BuiltIn.Skip                ('HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/5')
-    ${response}=       DELETE      https://petstore.swagger.io/v2/pet/5
+    ${response}=       DELETE      https://petstore.swagger.io/v2/pet/${order_id}
 
 Swagger update image Test
-#    BuiltIn.Fail
-    BuiltIn.Skip                'HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/2/uploadImage'
-#    BuiltIn.Pass execution       HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/2/uploadImage
-    ${response}=       POST      https://petstore.swagger.io/v2/pet/2/uploadImage
+    ${file} =  Get File For Streaming Upload  /home/chernomorov/Pictures/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg
+    ${files} =  create dictionary  file=${file}
 
-
+    ${headers} =  create dictionary  Content-Type=multipart/form-data  accept=application/json
+    ${response}=       POST      https://petstore.swagger.io/v2/pet/${order_id}/uploadImage  files=${files}

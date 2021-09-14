@@ -18,7 +18,6 @@ Setup Store Tests
     ${data_order} =  evaluate  {"id": ${order_id}, "petId": 0, "quantity": 0, "shipDate": "2021-09-10T12:12:18.589Z", "status": "placed", "complete": True}
     set suite variable  ${data_order}  ${data_order}
 
-
 *** Test Cases ***
 Swagger store inventory Test
     ${response}=    GET      https://petstore.swagger.io/v2/store/inventory
