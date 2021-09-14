@@ -23,24 +23,31 @@ Setup Pet Tests
 *** Test Cases ***
 Swagger add new pet Test
     ${response}=    POST      https://petstore.swagger.io/v2/pet     json=${data_pet}       headers=&{headers}
+    Status Should Be    OK   ${response}
 
 Swagger update pet Test
     ${response}=    PUT      https://petstore.swagger.io/v2/pet     json=${data_pet}       headers=&{headers}
+    Status Should Be    OK   ${response}
 
 Swagger find pet Test
     ${response}=    GET      https://petstore.swagger.io/v2/pet/findByStatus
+    Status Should Be    OK   ${response}
 
 Swagger find pet by id Test
     ${response}=       GET      https://petstore.swagger.io/v2/pet/${order_id}
+    Status Should Be    OK   ${response}
 
 Swagger update pet by form Test
     ${response}=       POST      https://petstore.swagger.io/v2/pet/${order_id}
+    Status Should Be    OK   ${response}
 
 Swagger delete pet Test
     ${response}=       DELETE      https://petstore.swagger.io/v2/pet/${order_id}
+    Status Should Be    OK   ${response}
 
 Swagger update image Test
     ${file} =  Get File For Streaming Upload  /home/chernomorov/Pictures/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg
     ${files} =  create dictionary  file=${file}
     ${headers} =  create dictionary  Content-Type=multipart/form-data  accept=application/json
     ${response}=       POST      https://petstore.swagger.io/v2/pet/${order_id}/uploadImage  files=${files}
+    Status Should Be    OK   ${response}
