@@ -25,7 +25,6 @@ Swagger store inventory Test
 
 Swagger store oder Test
     ${response}=    POST     https://petstore.swagger.io/v2/store/order     json=${data_order}      headers=&{headers}
-    sleep  2 sec
 
 Swagger store oder id Test
     BuiltIn.Skip           "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"
