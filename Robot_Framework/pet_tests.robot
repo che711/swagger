@@ -15,7 +15,7 @@ Library           BuiltIn
 
 *** Keywords ***
 Setup Pet Tests
-    ${order_id} =  evaluate  random.randint(1,10)  random
+    ${order_id} =  evaluate  random.randint(1,5)  random
     set suite variable    ${order_id}  ${order_id}
     ${data_pet} =  evaluate  {"id": ${order_id}, "category": {"id": ${order_id}, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": ${order_id}, "name": "string" }], "status": "available"}
     set suite variable  ${data_pet}  ${data_pet}
