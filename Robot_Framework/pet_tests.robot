@@ -23,11 +23,11 @@ Swagger find pet Test
     ${response}=    GET      https://petstore.swagger.io/v2/pet/findByStatus
 
 Swagger find pet by id Test
-    BuiltIn.Pass execution      HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
+#    BuiltIn.Pass execution    HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
     ${response}=       GET      https://petstore.swagger.io/v2/pet/1
 
 Swagger update pet by form Test
-    BuiltIn.Pass execution     'HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1'
+    BuiltIn.Pass execution     HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/1
     ${response}=       POST      https://petstore.swagger.io/v2/pet/1
 
 Swagger delete pet Test
@@ -36,7 +36,8 @@ Swagger delete pet Test
 
 Swagger update image Test
 #    BuiltIn.Fail
-    BuiltIn.Skip               'HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/3/uploadImage'
-#    BuiltIn.Pass execution       'HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/3/uploadImage'
+    BuiltIn.Skip                'HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/2/uploadImage'
+#    BuiltIn.Pass execution       HTTPError: 415 Client Error: Unsupported Media Type for url: https://petstore.swagger.io/v2/pet/2/uploadImage
     ${response}=       POST      https://petstore.swagger.io/v2/pet/2/uploadImage
+
 
