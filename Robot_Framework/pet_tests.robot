@@ -11,7 +11,6 @@ Library           BuiltIn
 
 *** Variables ***
 &{headers}        Content-Type=application/json
-#${data_pet}       {"id": 0, "category": {"id": 0, "name": "string"}, "name": "doggie", "photoUrls": ["string"], "tags": [{"id": 0, "name": "string" }], "status": "available"}
 
 
 *** Keywords ***
@@ -43,6 +42,5 @@ Swagger delete pet Test
 Swagger update image Test
     ${file} =  Get File For Streaming Upload  /home/chernomorov/Pictures/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg
     ${files} =  create dictionary  file=${file}
-
     ${headers} =  create dictionary  Content-Type=multipart/form-data  accept=application/json
     ${response}=       POST      https://petstore.swagger.io/v2/pet/${order_id}/uploadImage  files=${files}
