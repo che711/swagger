@@ -42,3 +42,5 @@ Swagger update image Test
 
 
 
+docker run -p 9001:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+docker run -d -v jenkins_home:/var/jenkins_home -p 9001:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11
