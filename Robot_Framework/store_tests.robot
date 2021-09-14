@@ -28,9 +28,9 @@ Swagger store oder Test
     sleep  2 sec
 
 Swagger store oder id Test
-    BuiltIn.Skip           "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"
+    BuiltIn.Skip           "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/${order_id}     json=${data_order}
 
 Swagger store oder delete Test
-    BuiltIn.Skip              "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/4"
+    BuiltIn.Skip              "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"
     ${response}=    DELETE     https://petstore.swagger.io/v2/store/order/${order_id}     json=${data_order}
