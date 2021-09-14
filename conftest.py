@@ -15,8 +15,7 @@ def user_data():
             "password": "string",
             "phone": "string",
             "userStatus": 0
-          }
-    ]
+          }]
     return data
 
 @pytest.fixture()

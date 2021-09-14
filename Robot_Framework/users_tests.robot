@@ -18,10 +18,10 @@ Swagger user get username Test
     ${response}=    GET      https://petstore.swagger.io/v2/user/string
 
 Swagger user post createWithList Test
-    ${response}=    POST     https://petstore.swagger.io/v2/user/createWithList  data= ${data_list}   headers=${headers}
+    ${response}=    POST     https://petstore.swagger.io/v2/user/createWithList  data= ${data_list}   headers=&{headers}
 
 Swagger user put username Test
-    ${response}=    PUT      https://petstore.swagger.io/v2/user/string           data=${data}     headers=${headers}
+    ${response}=    PUT      https://petstore.swagger.io/v2/user/string           data=${data}     headers=&{headers}
 
 Swagger user del username Test
     ${response}=    DELETE   https://petstore.swagger.io/v2/user/string     headers=${headers}
