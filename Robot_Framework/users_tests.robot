@@ -17,31 +17,40 @@ ${data_to_login}  [{"username": "string", "password": "string"}]
 Swagger user get username Test
     ${response}=    GET      https://petstore.swagger.io/v2/user/string
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger user post createWithList Test
     ${response}=    POST     https://petstore.swagger.io/v2/user/createWithList  data= ${data_list}   headers=&{headers}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger user put username Test
     ${response}=    PUT      https://petstore.swagger.io/v2/user/string           data=${data}     headers=&{headers}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger user del username Test
     ${response}=    DELETE   https://petstore.swagger.io/v2/user/string     headers=${headers}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger user login Test
     ${response}=    GET     https://petstore.swagger.io/v2/user/login       headers=${headers}    data=${data_to_login}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger user logout Test
     ${response}=    GET     https://petstore.swagger.io/v2/user/logout       headers=${headers}    data=${data_to_login}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger list user Test
     ${response}=    POST     https://petstore.swagger.io/v2/user/createWithArray    headers=${headers}    data=${data_list}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger create user Test
     ${response}=    POST     https://petstore.swagger.io/v2/user    headers=${headers}    data=${data}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
+
