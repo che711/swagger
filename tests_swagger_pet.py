@@ -28,7 +28,7 @@ def test_find_pet_by_id():
     # print("\n\t", find_pet_by_id.url)
     assert find_pet_by_id.status_code == 200, 'Falling'
 
-@pytest.mark.skip(reason="there is a random value")
+@pytest.mark.skip(reason="There is a random value")
 def test_update_pet_by_form():
     '''Updates a pet in the store with form data'''
     update_pet = requests.post(url=api_urls.Pet.FIND_PET_BY_FORM)
@@ -42,7 +42,6 @@ def test_delete_pet(pet_to_store):
     # print("\n\t", delete_pet.url)
     assert delete_pet.status_code == 200, 'Falling'
 
-# @pytest.mark.xfail
 def test_uploads_image():
     '''Uploads an image'''
     with open('./Robot_Framework/data/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg', 'rb') as f:
