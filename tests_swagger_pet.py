@@ -45,7 +45,7 @@ def test_delete_pet(pet_to_store):
 @pytest.mark.xfail
 def test_uploads_image():
     '''Uploads an image'''
-    with open('/home/chernomorov/Pictures/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg',
+    with open('./data/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg',
               'rb') as f:
         files = {"file": f}
         image = requests.post(url=api_urls.Pet.UPLOADS_AN_IMAGE, files=files)
