@@ -42,11 +42,10 @@ def test_delete_pet(pet_to_store):
     # print("\n\t", delete_pet.url)
     assert delete_pet.status_code == 200, 'Falling'
 
-@pytest.mark.xfail
+# @pytest.mark.xfail
 def test_uploads_image():
     '''Uploads an image'''
-    with open('./data/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg',
-              'rb') as f:
+    with open('./Robot_Framework/data/f2637562392edd24809a100a0211e6f8-symbols-design-logo-icon-design.jpg', 'rb') as f:
         files = {"file": f}
         image = requests.post(url=api_urls.Pet.UPLOADS_AN_IMAGE, files=files)
     assert image.status_code == 200, 'Falling'

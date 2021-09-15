@@ -23,5 +23,5 @@ class Pet():
     FIND_PET_BY_STATUS = BASE_URL + "/pet/findByStatus"
     FIND_PET_BY_ID = BASE_URL + f"/pet/{4}"
     FIND_PET_BY_FORM = BASE_URL + f"/pet/{4}"
-    UPLOADS_AN_IMAGE = BASE_URL + f"/pet/{4}/uploadImage"
+    UPLOADS_AN_IMAGE = BASE_URL + f"/pet/{2}/uploadImage"
 
