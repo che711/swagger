@@ -22,17 +22,21 @@ Setup Store Tests
 Swagger store inventory Test
     ${response}=    GET      https://petstore.swagger.io/v2/store/inventory
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger store oder Test
     ${response}=    POST     https://petstore.swagger.io/v2/store/order     json=${data_order}      headers=&{headers}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger store oder id Test
 #    BuiltIn.Skip           "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/${order_id}     json=${data_order}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
 
 Swagger store oder delete Test
 #    BuiltIn.Skip              "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"
     ${response}=    DELETE     https://petstore.swagger.io/v2/store/order/${order_id}     json=${data_order}
     Status Should Be    OK   ${response}
+    log to console           ${response.status_code}
