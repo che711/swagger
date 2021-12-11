@@ -50,3 +50,4 @@ def test_uploads_image():
     assert image.status_code == 200, 'Falling'
 
 
+
