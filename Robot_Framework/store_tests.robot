@@ -28,7 +28,7 @@ Swagger store oder Test
     Status Should Be    OK   ${response}
 
 Swagger store oder id Test
-#    BuiltIn.Skip           "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"
+    BuiltIn.Skip           "HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/store/order/${order_id}"
     ${response}=    GET     https://petstore.swagger.io/v2/store/order/${order_id}     json=${data_order}
     Status Should Be    OK   ${response}
     log to console           https://petstore.swagger.io/v2/store/order/${order_id}
